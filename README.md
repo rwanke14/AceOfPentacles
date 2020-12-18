@@ -1,6 +1,6 @@
 # Project1_GW
 
-Team: Ace of Penncales
+Team: Ace of Pentacles
 
 Description: Tarot card reader app with astrology functions.
 
