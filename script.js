@@ -16,9 +16,6 @@ $.ajax(settings).done(function (response) {
 });
 
 
-
-
-
 /*
 
 First Page: 
