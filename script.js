@@ -28,15 +28,17 @@ First Page:
 
 	Body - have carousel and three slides explaining the process or what they get. Each slide has a button that lets you go to the next page to select deck.
 
-	Footer - larger and lists out all the pages for links and you can add fake legal. You could put social media for fun but not have them lead anywhere?
+	Footer - larger than navbar and lists out all the pages for links and you can add fake legal. You could put social media for fun but not have them lead anywhere?
 
 Second Page
+
 	Nav and footer are the same.
 	Change center container to as many sections we need to hold the various decks
 		-drop down menu to select and select layout?
 		-Tarot shuffle button on this page to move to next page?
 
 Third Page
+
 	Nav and footer the same.
 	Show the shuffle of cards.
 	then layout the reading along with the layout the chose. 
