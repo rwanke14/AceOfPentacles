@@ -31,4 +31,3 @@ Rapid API - https://rapidapi.com/ine0nite/api/astrology-horoscope/endpoints
 
 ![TarotSortPage](./assets/TarotSortPage.jpeg)
 
-Amir was here 0.0
