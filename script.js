@@ -18,4 +18,5 @@ $.ajax(settings).done(function (response) {
 
 $.getJSON('https://rws-cards-api.herokuapp.com/api/v1/cards', function(data) {
     // JSON result in `data` variable
+    console.log(data);
 });
