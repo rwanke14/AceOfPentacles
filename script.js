@@ -1,5 +1,9 @@
 console.log('Hello world');
 
+$(document).ready(function(){
+    $('.carousel').carousel();
+  });
+
 const settings = {
 	"async": true,
 	"crossDomain": true,
@@ -14,6 +18,8 @@ const settings = {
 $.ajax(settings).done(function (response) {
 	console.log(response);
 });
+
+
 
 
 /*
