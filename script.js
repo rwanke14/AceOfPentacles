@@ -1,8 +1,22 @@
-console.log('Hello world');
+// Carousel time switch variables
+const elems = document.querySelector('.carousel');
+const duration = 6000; //milliseconds 
 
+<<<<<<< HEAD
 $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true
+=======
+// Initiate carousel transition
+M.Carousel.init(elems); 
+
+// Carousel loop function
+setInterval(function () {
+  M.Carousel.getInstance(elems).next();
+}, duration);
+$(document).ready(function(){
+    $('.carousel').carousel();
+>>>>>>> 3b56b7386123b9f67914f39cd65fc8c8bce4a436
   });
 
 const settings = {
@@ -20,8 +34,35 @@ $.ajax(settings).done(function (response) {
 	console.log(response);
 });
 
+$.getJSON('https://rws-cards-api.herokuapp.com/api/v1/cards', function(data) {
+	console.log(data.cards[0].name);
+	
+});
 
+$('.ppfBtn').click(function (e) { 
+	e.preventDefault();
+	$('.carousel').hide();
+	var cardDiv = $('<div>');
+	var cardBack = $('<img src=./assets/card-images/card-back.jpg>');
+	$(cardDiv).append(cardBack);
+	$('#main').append(cardDiv);
+	// Button on slide 2 is pressed
+	// Carousel is hidden. Card deck is displayed
+	// User clicks card deck, cards shuffle
+	// Card shuffle ends, interval stops, three card spread is displayed
+	// Spread is shown with back facing
+	// User clicks each card one by one to reveal (math.random)
+	// User can click the card to bring info to display
+	
+});
 
+$('.welcomeSlide').text('Welcome to the Tarot');
+$('.welcomeText').text('INSERT TAROT EXPLANATION HERE');
+// Insert background image for slide 1 or appropriate color palette 
+
+$('.ppfTitle').text('Past - Present - Future Spread');
+$('.ppfInfo').text('A classic spread. Use the tarot to explore your past, present, and future.');
+$('.btn').text('See my spread');
 
 /*
 
@@ -63,7 +104,4 @@ Fourth Page
 
 
 
-$.getJSON('https://rws-cards-api.herokuapp.com/api/v1/cards', function(data) {
-    // JSON result in `data` variable
-    console.log(data);
-});
+
