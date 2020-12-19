@@ -1,13 +1,89 @@
 /*font-family: 'Montserrat', sans-serif;
 font-family: 'Montserrat Alternates', sans-serif;*/
 
+
+/* body set with background color and graphic with stars and moon*/
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #38597E;
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-image: url(./assets/stars&moonsgraphic.png);
+    background-size: 52% 50%;
   }
 
+  /* Setting navbar style*/
+
+  nav {
+    background-color: #b0a36c;
+    font-family: 'Montserrat Alternates', sans-serif;
+    
+  }
+
+  nav ul a {
+    color: #DDE1E9;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: large;
+  }
+
+  nav .brand-logo {
+    color: #DDE1E9;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: xx-large;
+    padding-left: 2%;
+  }
+
+  /* setting main content styles*/
   main {
     flex: 1 0 auto;
   }
+
+  /* carousel style */
+  .carousel {
+
+    margin-top: 30%;
+    background-color: #E7BD42;
+
+  }
+
+  .carousel-item {
+    background-color: #C29F38;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+
+  /*  Buttons */
+
+  .btn {
+    background-color: #38597E;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+    font-weight: bolder;
+  }
+
+  .btn:hover {
+    background-image: url(https://media.giphy.com/media/raJa0mPRFe8zC/giphy.gif);
+   
+  }
+
+  /* footer style */
+  
+  .page-footer {
+    margin-top: 25%;
+    background-color: #b0a36c;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #DDE1E9;
+    font-family: 'Montserrat Alternates', sans-serif;;
+  }
+
+  .navColor {
+    color: #DDE1E9;
+    font-family: 'Montserrat Alternates', sans-serif;;
+  }
+
+
       

@@ -2,38 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Montserrat:wght@300;400&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Montserrat:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
-    <header>
-        <div class="navbar-fixed">
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo">Logo</a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="sass.html">Sass</a></li>
-                        <li><a href="badges.html">Components</a></li>
-                    </ul>
-                </div>
-            </nav>
+  <header>
+    <div class="navbar-fixed" id="navbar">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">Ace of Pentacles</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+          </ul>
         </div>
+      </nav>
     </header>
 
-    <div class=container id="main">
+    <!-- <div class=container id="main">
         <div class="carousel carousel-slider center ">
-            <!-- <div class="carousel-fixed-item center">
+            <div class="carousel-fixed-item center">
               <a class="btn waves-effect white grey-text darken-text-2"></a>
-            </div> -->
+            </div> 
             <div class="carousel-item red white-text" href="#one!">
               <h2 class="welcomeSlide">First Panel</h2>
               <p class="white-text welcomeText">This is your first panel</p>
@@ -53,39 +52,59 @@
             </div>
           </div>
     </div>
+  </header> -->
 
+  <div class=container id="main">
+    <div class="carousel carousel-slider center" >
+      <div class="carousel-fixed-item center" data-ride="carousel">
+        <a class="btn waves-effect darken-text-2">button</a>
+      </div>
+      <div class="carousel-item white-text" href="#one!" data-slide-to="0">
+        <span class="icon-prev" aria-hidden="true"></span>
+        <h2></h2>
+        <p class="white-text">This is your first panel</p>
+      </div>
+      <div class="carousel-item white-text" href="#two!" data-slide-to="1">
+        <h2>Second Panel</h2>
+        <p class="white-text">This is your second panel</p>
+        <button class="ppfBtn">See My Spread</button>
+      </div>
+      <div class="carousel-item white-text" href="#three!" data-slide-to="2">
+        <h2>Third Panel</h2>
+        <p class="white-text">This is your third panel</p>
+      </div>
+    </div>
+  </div>
 
-    <footer class="page-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Footer Content</h5>
-              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-              </ul>
-            </div>
-          </div>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="navColor">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
         </div>
-        <div class="footer-copyright">
-          <div class="container">
-          © 2014 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-          </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="navColor">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+          </ul>
         </div>
-      </footer>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2020 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
