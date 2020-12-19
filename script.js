@@ -7,7 +7,7 @@ M.Carousel.init(elems);
 
 // Carousel loop function
 setInterval(function () {
-  M.Carousel.getInstance(elems).next(); // See Materialize Documentation for next
+  M.Carousel.getInstance(elems).next();
 }, duration);
 $(document).ready(function(){
     $('.carousel').carousel();
@@ -29,12 +29,24 @@ $.ajax(settings).done(function (response) {
 });
 
 $.getJSON('https://rws-cards-api.herokuapp.com/api/v1/cards', function(data) {
-	//console.log(data.cards[0].name);
+	console.log(data.cards[0].name);
 	
 });
 
-$('.btn').click(function (e) { 
+$('.ppfBtn').click(function (e) { 
 	e.preventDefault();
+	$('.carousel').hide();
+	var cardDiv = $('<div>');
+	var cardBack = $('<img src=./assets/card-images/card-back.jpg>');
+	$(cardDiv).append(cardBack);
+	$('#main').append(cardDiv);
+	// Button on slide 2 is pressed
+	// Carousel is hidden. Card deck is displayed
+	// User clicks card deck, cards shuffle
+	// Card shuffle ends, interval stops, three card spread is displayed
+	// Spread is shown with back facing
+	// User clicks each card one by one to reveal (math.random)
+	// User can click the card to bring info to display
 	
 });
 
