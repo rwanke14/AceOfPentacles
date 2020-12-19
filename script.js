@@ -1,5 +1,14 @@
+// Carousel time switch variables
+const elems = document.querySelector('.carousel');
+const duration = 6000; //milliseconds 
 
+// Initiate carousel transition
+M.Carousel.init(elems); 
 
+// Carousel loop function
+setInterval(function () {
+  M.Carousel.getInstance(elems).next(); // See Materialize Documentation for next
+}, duration);
 $(document).ready(function(){
     $('.carousel').carousel();
   });
@@ -35,7 +44,7 @@ $('.welcomeText').text('INSERT TAROT EXPLANATION HERE');
 
 $('.ppfTitle').text('Past - Present - Future Spread');
 $('.ppfInfo').text('A classic spread. Use the tarot to explore your past, present, and future.');
-
+$('.btn').text('See my spread');
 
 /*
 
