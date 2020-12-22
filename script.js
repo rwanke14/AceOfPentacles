@@ -2,11 +2,6 @@
 const elems = document.querySelector('.carousel');
 const duration = 6000; //milliseconds 
 
-<<<<<<< HEAD
-$('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true
-=======
 // Initiate carousel transition
 M.Carousel.init(elems); 
 
@@ -16,7 +11,6 @@ setInterval(function () {
 }, duration);
 $(document).ready(function(){
     $('.carousel').carousel();
->>>>>>> 3b56b7386123b9f67914f39cd65fc8c8bce4a436
   });
 
 const settings = {
