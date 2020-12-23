@@ -41,11 +41,8 @@ $(document).ready(function () {
 				$('.card').click((e) => {
 					e.preventDefault();
 					for (var i = 0; i < 3; i++) {
-						//console.log(cardData.cards[i].name);
-						//console.log(cards.cards[0].name);
-						//console.log(Math.floor(Math.random() * cards.cards.length));
-						var randoCard = Math.floor(Math.random() * cardData.cards.length);
-						console.log(cardData.cards[i].name);
+						var randomCard = Math.floor(Math.random() * cardData.cards.length);
+						console.log(cardData.cards[randomCard].name);
 					}
 				})};
 
@@ -63,10 +60,8 @@ $(document).ready(function () {
 						var cardBack = $('<a class="card"><img src=./assets/card-images/card-back.jpg></a>');
 						$(cardDiv).append(cardBack);
 						$('#main').append(cardDiv);
-						showCards();
-
 					}
-
+					showCards();
 					// Button on slide 2 is pressed
 					// Carousel is hidden. Card deck is displayed
 					// User clicks card deck, cards shuffle
