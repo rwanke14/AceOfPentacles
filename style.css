@@ -8,10 +8,10 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #38597E;
+    background-color: #293c53;
     background-repeat: no-repeat;
     background-size: 140%;
-    background-image: url(./assets/stars&moonsgraphic.png);
+    background-image: url(./assets/moon&stars.gif);
     background-size: 52% 50%;
   }
 
@@ -58,7 +58,7 @@ body {
   /*  Buttons */
 
   .btn {
-    background-color: #38597E;
+    background-color: #293c53;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: medium;
