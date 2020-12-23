@@ -1,101 +1,122 @@
-// Carousel time switch variables
-const elems = document.querySelector('.carousel');
-const duration = 6000; //milliseconds 
+$(document).ready(function () {
+	// Carousel time switch variables
+	const elems = document.querySelector('.carousel');
+	const duration = 6000; //milliseconds 
 
-// Initiate carousel transition
-M.Carousel.init(elems); 
+	// Initiate carousel transition
+	M.Carousel.init(elems);
 
-// Carousel loop function
-setInterval(function () {
-  M.Carousel.getInstance(elems).next();
-}, duration);
-$(document).ready(function(){
-    $('.carousel').carousel();
-  });
+	// Carousel loop function
+	setInterval(function () {
+		M.Carousel.getInstance(elems).next();
+	}, duration);
+	$(document).ready(function () {
+	$('.carousel').carousel();
+	});
 
-const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://astrology-horoscope.p.rapidapi.com/zodiac_finder/details_requirements/",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "87b6f48f43mshd9aaace1d8eeaefp1a1912jsn1259fae457e2",
-		"x-rapidapi-host": "astrology-horoscope.p.rapidapi.com"
-	}
-};
+	const settings = {
+		"async": true,
+				"crossDomain": true,
+				// "url": "https://astrology-horoscope.p.rapidapi.com/zodiac_finder/details_requirements/",
+				"method": "GET",
+				"headers": {
+					"x-rapidapi-key": "87b6f48f43mshd9aaace1d8eeaefp1a1912jsn1259fae457e2",
+					"x-rapidapi-host": "astrology-horoscope.p.rapidapi.com"
+				}
+			};
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
+			// $.ajax(settings).done(function (response) {
+			// 	console.log(response);
+			// });
+
+			$.getJSON('https://rws-cards-api.herokuapp.com/api/v1/cards', function (data) {
+				console.log(data);
+				console.log(data.cards[20].name);
+				cardData = data;
+			});
+
+			var cardData;
+
+			function showCards(data) {
+				$('.card').click((e) => {
+					e.preventDefault();
+					for (var i = 0; i < 3; i++) {
+						//console.log(cardData.cards[i].name);
+						//console.log(cards.cards[0].name);
+						//console.log(Math.floor(Math.random() * cards.cards.length));
+						var randoCard = Math.floor(Math.random() * cardData.cards.length);
+						console.log(randoCard[cardData.cards[i].name]);
+					}
+				})};
+
+				
+				var cards = ["fool", "man", "magician"];
+        		console.log(cards[Math.floor(Math.random() * cards.length)]);
+
+
+
+				$('.ppfBtn').click(function (e) {
+					e.preventDefault();
+					$('.carousel').remove();
+					var cardDiv = $('<div>');
+					for (var i = 0; i < 3; i++) {
+						var cardBack = $('<a class="card"><img src=./assets/card-images/card-back.jpg></a>');
+						$(cardDiv).append(cardBack);
+						$('#main').append(cardDiv);
+						showCards();
+
+					}
+
+					// Button on slide 2 is pressed
+					// Carousel is hidden. Card deck is displayed
+					// User clicks card deck, cards shuffle
+					// Card shuffle ends, interval stops, three card spread is displayed
+					// Spread is shown with back facing
+					// User clicks each card one by one to reveal (math.random)
+					// User can click the card to bring info to display
+
+				});
+
+				$('.welcomeSlide').text('Welcome to the Tarot');
+				$('.welcomeText').text('INSERT TAROT EXPLANATION HERE');
+				// Insert background image for slide 1 or appropriate color palette 
+
+				$('.ppfTitle').text('Past - Present - Future Spread');
+				$('.ppfInfo').text('A classic spread. Use the tarot to explore your past, present, and future.');
+				$('.btn').text('See my spread');
+
+				/*
+
+				First Page: 
+
+					Header - 
+					Navbar setting up title of page.
+						- include small menu to connect the three pages we will have in case they want to move between
+						- do we have an about page explaining our team and the page
+					
+
+					Body - have carousel and three slides explaining the process or what they get. Each slide has a button that lets you go to the next page to select deck.
+
+					Footer - larger than navbar and lists out all the pages for links and you can add fake legal. You could put social media for fun but not have them lead anywhere?
+
+				Second Page
+
+					Nav and footer are the same.
+					Change center container to as many sections we need to hold the various decks
+						-drop down menu to select and select layout?
+						-Tarot shuffle button on this page to move to next page?
+
+				Third Page
+
+					Nav and footer the same.
+					Show the shuffle of cards.
+					then layout the reading along with the layout the chose. 
+					section explaining the reading
+					section explaining each card and their meaning?
+					section leading you back to the main page and starting over?
+
+				Fourth Page 
+					horoscope page?
+					horoscope of the day - select yours and pop up your horoscope. 
+				*/
 });
-
-$.getJSON('https://rws-cards-api.herokuapp.com/api/v1/cards', function(data) {
-	console.log(data.cards[0].name);
-	
-});
-
-$('.ppfBtn').click(function (e) { 
-	e.preventDefault();
-	$('.carousel').hide();
-	var cardDiv = $('<div>');
-	var cardBack = $('<img src=./assets/card-images/card-back.jpg>');
-	$(cardDiv).append(cardBack);
-	$('#main').append(cardDiv);
-	// Button on slide 2 is pressed
-	// Carousel is hidden. Card deck is displayed
-	// User clicks card deck, cards shuffle
-	// Card shuffle ends, interval stops, three card spread is displayed
-	// Spread is shown with back facing
-	// User clicks each card one by one to reveal (math.random)
-	// User can click the card to bring info to display
-	
-});
-
-$('.welcomeSlide').text('Welcome to the Tarot');
-$('.welcomeText').text('INSERT TAROT EXPLANATION HERE');
-// Insert background image for slide 1 or appropriate color palette 
-
-$('.ppfTitle').text('Past - Present - Future Spread');
-$('.ppfInfo').text('A classic spread. Use the tarot to explore your past, present, and future.');
-$('.btn').text('See my spread');
-
-/*
-
-First Page: 
-
-	Header - 
-	Navbar setting up title of page.
-		- include small menu to connect the three pages we will have in case they want to move between
-		- do we have an about page explaining our team and the page
-	
-
-	Body - have carousel and three slides explaining the process or what they get. Each slide has a button that lets you go to the next page to select deck.
-
-	Footer - larger than navbar and lists out all the pages for links and you can add fake legal. You could put social media for fun but not have them lead anywhere?
-
-Second Page
-
-	Nav and footer are the same.
-	Change center container to as many sections we need to hold the various decks
-		-drop down menu to select and select layout?
-		-Tarot shuffle button on this page to move to next page?
-
-Third Page
-
-	Nav and footer the same.
-	Show the shuffle of cards.
-	then layout the reading along with the layout the chose. 
-	section explaining the reading
-	section explaining each card and their meaning?
-	section leading you back to the main page and starting over?
-
-Fourth Page 
-	horoscope page?
-	horoscope of the day - select yours and pop up your horoscope. 
-*/
-
-
-
-
-
-
-
