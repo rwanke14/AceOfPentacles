@@ -45,7 +45,7 @@ $(document).ready(function () {
 						//console.log(cards.cards[0].name);
 						//console.log(Math.floor(Math.random() * cards.cards.length));
 						var randoCard = Math.floor(Math.random() * cardData.cards.length);
-						console.log(randoCard[cardData.cards[i].name]);
+						console.log(cardData.cards[i].name);
 					}
 				})};
 
