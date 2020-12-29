@@ -41,9 +41,12 @@ $(document).ready(function () {
 				$('.card').click((e) => {
 					e.preventDefault();
 					for (var i = 0; i < 3; i++) {
-						var randomCard = Math.floor(Math.random() * cardData.cards.length);
-						console.log(cardData.cards[randomCard].name);
+						
 					}
+					var randomCard = Math.floor(Math.random() * cardData.cards.length);
+					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
+					cardImage = (cardData.cards[randomCard].name_short);
+					$('img').attr('src', './assets/card-images/' + cardImage + '.png');
 				})};
 
 				
