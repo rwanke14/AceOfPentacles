@@ -6,6 +6,9 @@ $(document).ready(function () {
 	// Initiate carousel transition
 	M.Carousel.init(elems);
 
+	// Boolean to randomize card flip
+	var flip = Math.random() < 0.5;
+	
 	// Carousel loop function
 	setInterval(function () {
 		M.Carousel.getInstance(elems).next();
@@ -42,6 +45,10 @@ $(document).ready(function () {
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
 					$('#0').attr('src', './assets/card-images/' + cardImage + '.png');
+					var flip1 = Math.random() < 0.5;
+					if (flip1 === true) {
+						$('img id=0').addClass('flip');
+					}
 				})
 
 				$('#1').click(function() {
@@ -49,12 +56,20 @@ $(document).ready(function () {
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
 					$('#1').attr('src', './assets/card-images/' + cardImage + '.png');
+					var flip2 = Math.random() < 0.5;
+					if (flip2 === true) {
+						$('img id=1').addClass('flip');
+					}
 				})
 				$('#2').click(function() {
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
 					$('#2').attr('src', './assets/card-images/' + cardImage + '.png');
+					var flip3 = Math.random() < 0.5;
+					if (flip3 === true) {
+						$('img id=2').addClass('flip');
+					}
 				})
 				};
 
