@@ -6,6 +6,9 @@ $(document).ready(function () {
 	// Initiate carousel transition
 	M.Carousel.init(elems);
 
+	// Boolean to randomize card flip
+	var flip = Math.random() < 0.5;
+	
 	// Carousel loop function
 	setInterval(function () {
 		M.Carousel.getInstance(elems).next();
@@ -31,37 +34,53 @@ $(document).ready(function () {
 
 			$.getJSON('https://rws-cards-api.herokuapp.com/api/v1/cards', function (data) {
 				console.log(data);
-				console.log(data.cards[20].name);
 				cardData = data;
 			});
 
 			var cardData;
 
 			function showCards(data) {
-				$('.card').click((e) => {
-					e.preventDefault();
-					for (var i = 0; i < 3; i++) {
-						
-					}
+				$('#0').click(function() {
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
-					$('img').attr('src', './assets/card-images/' + cardImage + '.png');
-				})};
+					$('#0').attr('src', './assets/card-images/' + cardImage + '.png');
+					var flip1 = Math.random() < 0.5;
+					if (flip1 === true) {
+						$('img id=0').addClass('flip');
+					}
+				})
 
-				
-				var cards = ["fool", "man", "magician"];
-        		console.log(cards[Math.floor(Math.random() * cards.length)]);
-
-
+				$('#1').click(function() {
+					var randomCard = Math.floor(Math.random() * cardData.cards.length);
+					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
+					cardImage = (cardData.cards[randomCard].name_short);
+					$('#1').attr('src', './assets/card-images/' + cardImage + '.png');
+					var flip2 = Math.random() < 0.5;
+					if (flip2 === true) {
+						$('img id=1').addClass('flip');
+					}
+				})
+				$('#2').click(function() {
+					var randomCard = Math.floor(Math.random() * cardData.cards.length);
+					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
+					cardImage = (cardData.cards[randomCard].name_short);
+					$('#2').attr('src', './assets/card-images/' + cardImage + '.png');
+					var flip3 = Math.random() < 0.5;
+					if (flip3 === true) {
+						$('img id=2').addClass('flip');
+					}
+				})
+				};
 
 				$('.ppfBtn').click(function (e) {
 					e.preventDefault();
 					$('.carousel').remove();
 					var cardDiv = $('<div>');
 					for (var i = 0; i < 3; i++) {
-						var cardBack = $('<a class="card"><img src=./assets/card-images/card-back.jpg></a>');
+						var cardBack = $('<img src=./assets/card-images/card-back.jpg>');
 						$(cardDiv).append(cardBack);
+						$(cardBack).attr('id', [i]);
 						$('#main').append(cardDiv);
 					}
 					showCards();
