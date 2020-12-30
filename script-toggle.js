@@ -37,33 +37,34 @@ $(document).ready(function () {
 			var cardData;
 
 			function showCards(data) {
-				$('#0').click(function() {
+				$('.card').click((e) => {
+					e.preventDefault();
+		
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
-					$('#0').attr('src', './assets/card-images/' + cardImage + '.png');
-				})
+					
+					if (e.currentTarget) {
+						$('img').attr('src', './assets/card-images/' + cardImage + '.png');
+					}
+					
+					
+					
+					
+				})};
 
-				$('#1').click(function() {
-					var randomCard = Math.floor(Math.random() * cardData.cards.length);
-					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
-					cardImage = (cardData.cards[randomCard].name_short);
-					$('#1').attr('src', './assets/card-images/' + cardImage + '.png');
-				})
-				$('#2').click(function() {
-					var randomCard = Math.floor(Math.random() * cardData.cards.length);
-					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
-					cardImage = (cardData.cards[randomCard].name_short);
-					$('#2').attr('src', './assets/card-images/' + cardImage + '.png');
-				})
-				};
+				
+				var cards = ["fool", "man", "magician"];
+        		console.log(cards[Math.floor(Math.random() * cards.length)]);
+
+
 
 				$('.ppfBtn').click(function (e) {
 					e.preventDefault();
 					$('.carousel').remove();
 					var cardDiv = $('<div>');
 					for (var i = 0; i < 3; i++) {
-						var cardBack = $('<img src=./assets/card-images/card-back.jpg>');
+						var cardBack = $('<a class="card"><img src=./assets/card-images/card-back.jpg></a>');
 						$(cardDiv).append(cardBack);
 						$(cardBack).attr('id', [i]);
 						$('#main').append(cardDiv);
