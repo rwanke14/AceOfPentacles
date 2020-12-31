@@ -87,30 +87,18 @@ body {
 
   .flip {
     transform: scaleY(-1);
-<<<<<<< HEAD
-  }
-=======
   }
 
-  .orientation {
-    transform: scaleY(1);
+  .card-size {
+   
+   width: 25%;
   }
 
-  /* How to flip a card: */
-  /* <style>
-  img:hover {
-    -webkit-transform: scaleX(-1);
-    transform: scaleY(-1);
+  .card-format {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
   }
-  </style>
-  </head>
-  <body>
-  
-  <h2>Flip an Image</h2>
-  <p>Move your mouse over the image.</p>
-  
-  <img src="img_paris.jpg" alt="Paris" width="400" height="300"> */
-      
 
 /* About Tarot CSS */
 #aboutTarot{
@@ -194,4 +182,3 @@ font-size:14px;
 color:green;
 text-align:center;
 }
->>>>>>> d41e7b3bb62dd47d442238a5addb0d5a0cb6669c
