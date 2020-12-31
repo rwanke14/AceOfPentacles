@@ -6,9 +6,6 @@ $(document).ready(function () {
 	// Initiate carousel transition
 	M.Carousel.init(elems);
 
-	// Boolean to randomize card flip
-	var flip = Math.random() < 0.5;
-	
 	// Carousel loop function
 	setInterval(function () {
 		M.Carousel.getInstance(elems).next();
@@ -34,64 +31,37 @@ $(document).ready(function () {
 
 			$.getJSON('https://rws-cards-api.herokuapp.com/api/v1/cards', function (data) {
 				console.log(data);
+				console.log(data.cards[20].name);
 				cardData = data;
 			});
 
 			var cardData;
 
 			function showCards(data) {
-				$('#0').click(function() {
-					if ($('#0').hasClass('flip')) {
-						$('#0').removeClass('flip');
+				$('.card').click((e) => {
+					e.preventDefault();
+					for (var i = 0; i < 3; i++) {
+						
 					}
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
-		
-					$('#0').attr('src', './assets/card-images/' + cardImage + '.png');
-					var flip1 = Math.random() < 0.5;
-					if (flip1 === true) {
-						$('#0').addClass('flip');
-					}
-				});
+					$('img').attr('src', './assets/card-images/' + cardImage + '.png');
+				})};
 
-				$('#1').click(function() {
-					if ($('#1').hasClass('flip')) {
-						$('#1').removeClass('flip');
-					}
-					var randomCard = Math.floor(Math.random() * cardData.cards.length);
-					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
-					cardImage = (cardData.cards[randomCard].name_short);
-					$('#1').attr('src', './assets/card-images/' + cardImage + '.png');
-					var flip2 = Math.random() < 0.5;
-					if (flip2 === true) {
-						$('#1').addClass('flip');
-					}
-				});
+				
+				var cards = ["fool", "man", "magician"];
+        		console.log(cards[Math.floor(Math.random() * cards.length)]);
 
-				$('#2').click(function() {
-					if ($('#2').hasClass('flip')) {
-						$('#2').removeClass('flip');
-					}
-					var randomCard = Math.floor(Math.random() * cardData.cards.length);
-					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
-					cardImage = (cardData.cards[randomCard].name_short);
-					$('#2').attr('src', './assets/card-images/' + cardImage + '.png');
-					var flip3 = Math.random() < 0.5;
-					if (flip3 === true) {
-						$('#2').addClass('flip');
-					}
-				});
-				};
+
 
 				$('.ppfBtn').click(function (e) {
 					e.preventDefault();
 					$('.carousel').remove();
 					var cardDiv = $('<div>');
 					for (var i = 0; i < 3; i++) {
-						var cardBack = $('<img src=./assets/card-images/card-back.jpg>');
+						var cardBack = $('<a class="card"><img src=./assets/card-images/card-back.jpg></a>');
 						$(cardDiv).append(cardBack);
-						$(cardBack).attr('id', [i]);
 						$('#main').append(cardDiv);
 					}
 					showCards();
