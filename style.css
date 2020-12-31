@@ -87,6 +87,9 @@ body {
 
   .flip {
     transform: scaleY(-1);
+<<<<<<< HEAD
+  }
+=======
   }
 
   .orientation {
@@ -191,3 +194,4 @@ font-size:14px;
 color:green;
 text-align:center;
 }
+>>>>>>> d41e7b3bb62dd47d442238a5addb0d5a0cb6669c
