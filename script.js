@@ -47,17 +47,11 @@ $(document).ready(function () {
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
-					var card0 = $('#0').attr('src', './assets/card-images/' + cardImage + '.png');
+					$('#0').attr('src', './assets/card-images/' + cardImage + '.png');
 					var flip1 = Math.random() < 0.5;
 					if (flip1 === true) {
 						$('#0').addClass('flip');
 					}
-					var imageHold = $('<div class="card-format">');
-					var textContain = $('<div class="container">');
-					$(textContain).text(cardData.cards[randomCard].name);
-					$(imageHold).append(card0);
-					$(imageHold).append(textContain);
-					$('#main').append(imageHold);
 				});
 
 				$('#1').click(function() {
@@ -67,18 +61,15 @@ $(document).ready(function () {
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
-					var card1 = $('#1').attr('src', './assets/card-images/' + cardImage + '.png');
+					$('#1').attr('src', './assets/card-images/' + cardImage + '.png');
 					var flip2 = Math.random() < 0.5;
 					if (flip2 === true) {
 						$('#1').addClass('flip');
 					}
-					// THIS IS PSUEDOCODE. YOU NEED TO CHANGE THIS. 
-					// var imageHold = $('<div class="card-format">');
-					// var textContain = $('<div class="container">');
-					// $(textContain).text(cardData.cards[randomCard].name);
-					// $(imageHold).append(card1);
-					// $(imageHold).append(textContain);
-					// $('#main').append(imageHold);
+					var infoHold = $('<div class="textarea">');
+					var cardInfo1 = $(cardData.cards[randomCard].name);
+					$(infoHold).append(cardInfo1);
+					$('#1').append(infoHold);
 				});
 
 				$('#2').click(function() {
@@ -88,23 +79,18 @@ $(document).ready(function () {
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
-					var card2 = $('#2').attr('src', './assets/card-images/' + cardImage + '.png');
+					$('#2').attr('src', './assets/card-images/' + cardImage + '.png');
 					var flip3 = Math.random() < 0.5;
 					if (flip3 === true) {
 						$('#2').addClass('flip');
 					}
-					var imageHold = $('<div class="card-format">');
-					var textContain = $('<div class="container">');
-					$(textContain).text(cardData.cards[randomCard].name);
-					$(imageHold).append(card2);
-					$(imageHold).append(textContain);
-					$('#main').append(imageHold);
 				});
 				};
 
 				$('.ppfBtn').click(function (e) {
 					e.preventDefault();
 					$('.carousel').remove();
+					$('.ppfCards').attr('style', 'visibility: visible');
 					var cardDiv = $('<div>');
 					for (var i = 0; i < 3; i++) {
 						var cardBack = $('<img class="card-size" src=./assets/card-images/card-back.jpg>');
