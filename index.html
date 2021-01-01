@@ -11,6 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Montserrat:wght@300;400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -95,23 +96,51 @@
         <button class="ppfBtn btn waves-effect darken-text-2">Get reading</button>
       </div>
     </div>
-    <div class="row ppfCards" style="visibility: hidden;"></div>
+
+    <!-- Three card spread row -->
+    <div class="row ppfCards" style="visibility: hidden;">
+      <!-- Card 1 - Past -->
+      <div class='card col s4'>
+        <div class='card-image waves-effect waves-block waves-light'>
+          <img id='0' src=./assets/card-images/card-back.jpg>
+        </div>
+        <div class='card-content'>
+          <span class='card-title activator grey-text text-darken-4' id="title0"><i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class='card-reveal'>
+          <span class='card-title grey-text text-darken-4'><i class='material-icons right'>close</i></span>
+          <p id="reveal0"></p>
+        </div>
+      </div>
+      <!-- Card 2 - Present -->
+      <div class='card col s4'>
+        <div class='card-image waves-effect waves-block waves-light'>
+          <img id='1' src=./assets/card-images/card-back.jpg>
+        </div>
+        <div class='card-content'>
+          <span class='card-title activator grey-text text-darken-4' id='title1'><i class='material-icons right'>more_vert</i></span>
+        </div>
+        <div class='card-reveal'>
+          <span class='card-title grey-text text-darken-4'><i class='material-icons right'>close</i></span>
+          <p id="reveal1"></p>
+        </div>
+      </div>
+      <!-- Card 3 - Future -->
+      <div class='card col s4'>
+        <div class='card-image waves-effect waves-block waves-light'>
+          <img id='2' src=./assets/card-images/card-back.jpg>
+        </div>
+        <div class='card-content'>
+          <span class='card-title activator grey-text text-darken-4' id='title2'><i class='material-icons right'>more_vert</i></span>
+        </div>
+        <div class='card-reveal'>
+          <span class='card-title grey-text text-darken-4'><i class='material-icons right'>close</i></span>
+          <p id="reveal2"></p>
+        </div>
+      </div>
+    </div>
     <div class="row ppfInfo" style="visibility: hidden"></div>
   </div>
-
-  <!-- <div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-    </div>
-  </div> -->
 
   <footer class="page-footer">
     <div class="container">

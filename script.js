@@ -40,10 +40,11 @@ $(document).ready(function () {
 			var cardData;
 
 			function showCards(data) {
-				$('#0').click(function() {
+				$('#0').one("click", function() {
 					if ($('#0').hasClass('flip')) {
 						$('#0').removeClass('flip');
 					}
+					$('#0').attr('class', 'activator');
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
@@ -53,16 +54,22 @@ $(document).ready(function () {
 						$('#0').addClass('flip');
 					}
 
-					$('#info0').text(cardData.cards[randomCard].name + '\n' + 
-					cardData.cards[randomCard].desc);
+					$('#title0').text(cardData.cards[randomCard].name);
+					if ($('#0').hasClass('flip')) {
+						$('#reveal0').text('Meaning: ' + cardData.cards[randomCard].meaning_rev);
+					}
+					else {
+						$('#reveal0').text('Meaning: ' + cardData.cards[randomCard].meaning_up);
+					}
 					
 
 				});
 
-				$('#1').click(function() {
+				$('#1').one("click", function() {
 					if ($('#1').hasClass('flip')) {
 						$('#1').removeClass('flip');
 					}
+					$('#1').attr('class', 'activator');
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
@@ -72,13 +79,21 @@ $(document).ready(function () {
 						$('#1').addClass('flip');
 					}
 
-					$('#info1').text(cardData.cards[randomCard].name);
+					$('#title1').text(cardData.cards[randomCard].name);
+					if ($('#1').hasClass('flip')) {
+						$('#reveal1').text('Meaning: ' + cardData.cards[randomCard].meaning_rev);
+					}
+					else {
+						$('#reveal1').text('Meaning: ' + cardData.cards[randomCard].meaning_up);
+					}
+					
 				});
 
-				$('#2').click(function() {
+				$('#2').one("click", function() {
 					if ($('#2').hasClass('flip')) {
 						$('#2').removeClass('flip');
 					}
+					$('#2').attr('class', 'activator');
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
@@ -88,7 +103,13 @@ $(document).ready(function () {
 						$('#2').addClass('flip');
 					}
 
-					$('#info2').text(cardData.cards[randomCard].name);
+					$('#title2').text(cardData.cards[randomCard].name);
+					if ($('#2').hasClass('flip')) {
+						$('#reveal2').text('Meaning: ' + cardData.cards[randomCard].meaning_rev);
+					}
+					else {
+						$('#reveal2').text('Meaning: ' + cardData.cards[randomCard].meaning_up);
+					}
 				});
 				};
 
@@ -96,18 +117,20 @@ $(document).ready(function () {
 					e.preventDefault();
 					$('.carousel').remove();
 					$('.ppfCards').attr('style', 'visibility: visible');
-					$('.ppfInfo').attr('style', 'visibility: visible');
-					var cardDiv = $('<div>');
-					for (var i = 0; i < 3; i++) {
-						var cardBack = $('<img class="card-size" src=./assets/card-images/card-back.jpg>');
-						$(cardBack).attr('class', 'col s4');
-						$('.ppfCards').append(cardBack);
-						$(cardBack).attr('id', [i]);
-						//$('#main').append(cardDiv);
-						var fortune = $('<div class="col s4 card">');
-						$(fortune).attr('id', 'info' + [i]);
-						$('.ppfInfo').append(fortune);
-					}
+					//$('.ppfInfo').attr('style', 'visibility: visible');
+					// for (var i = 0; i < 3; i++) {
+					// 	var cardBack = $('<img class="activator" src=./assets/card-images/card-back.jpg>');
+					// 	//$(cardBack).attr('class', 'col s4');
+					
+					// 	$('.card-image').append(cardBack);
+
+					// 	//$('.ppfCards').append(cardBack);
+					// 	$(cardBack).attr('id', [i]);
+					// 	//$('#main').append(cardDiv);
+					// 	var fortune = $('<div class="col s4 card">');
+					// 	$(fortune).attr('id', 'info' + [i]);
+					// 	$('.ppfInfo').append(fortune);
+					// }
 					showCards();
 					// Button on slide 2 is pressed
 					// Carousel is hidden. Card deck is displayed
