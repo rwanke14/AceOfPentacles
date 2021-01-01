@@ -52,6 +52,11 @@ $(document).ready(function () {
 					if (flip1 === true) {
 						$('#0').addClass('flip');
 					}
+
+					$('#info0').text(cardData.cards[randomCard].name + '\n' + 
+					cardData.cards[randomCard].desc);
+					
+
 				});
 
 				$('#1').click(function() {
@@ -66,10 +71,8 @@ $(document).ready(function () {
 					if (flip2 === true) {
 						$('#1').addClass('flip');
 					}
-					var infoHold = $('<div class="textarea">');
-					var cardInfo1 = $(cardData.cards[randomCard].name);
-					$(infoHold).append(cardInfo1);
-					$('#1').append(infoHold);
+
+					$('#info1').text(cardData.cards[randomCard].name);
 				});
 
 				$('#2').click(function() {
@@ -84,6 +87,8 @@ $(document).ready(function () {
 					if (flip3 === true) {
 						$('#2').addClass('flip');
 					}
+
+					$('#info2').text(cardData.cards[randomCard].name);
 				});
 				};
 
@@ -91,12 +96,17 @@ $(document).ready(function () {
 					e.preventDefault();
 					$('.carousel').remove();
 					$('.ppfCards').attr('style', 'visibility: visible');
+					$('.ppfInfo').attr('style', 'visibility: visible');
 					var cardDiv = $('<div>');
 					for (var i = 0; i < 3; i++) {
 						var cardBack = $('<img class="card-size" src=./assets/card-images/card-back.jpg>');
-						$(cardDiv).append(cardBack);
+						$(cardBack).attr('class', 'col s4');
+						$('.ppfCards').append(cardBack);
 						$(cardBack).attr('id', [i]);
-						$('#main').append(cardDiv);
+						//$('#main').append(cardDiv);
+						var fortune = $('<div class="col s4 card">');
+						$(fortune).attr('id', 'info' + [i]);
+						$('.ppfInfo').append(fortune);
 					}
 					showCards();
 					// Button on slide 2 is pressed
@@ -114,7 +124,8 @@ $(document).ready(function () {
 				// Insert background image for slide 1 or appropriate color palette 
 
 				$('.ppfTitle').text('Past - Present - Future Spread');
-				$('.ppfInfo').text('A classic spread. Use the tarot to explore your past, present, and future.');
+				// REACTIVATE PPF INFO OR RENAME IT
+				//$('.ppfInfo').text('A classic spread. Use the tarot to explore your past, present, and future.');
 				$('.btn').text('See my spread');
 
 				/*
