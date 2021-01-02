@@ -52,7 +52,11 @@ body {
   .carousel-item {
     background-color: #C29F38;
     font-family: 'Montserrat', sans-serif;
+    
+  }
 
+  h1 {
+    font-size: 5vw;
   }
 
   /*  Buttons */
@@ -78,7 +82,7 @@ body {
     display: inline-block;
     border:none;
     outline: none;
-    padding: 10px 30px;
+    padding: 1%;
     font-size: 20px;
     color: #ddd;
     
@@ -87,11 +91,17 @@ body {
   .controlButton:hover {
     background: #888888;
     background-image: url(https://media.giphy.com/media/raJa0mPRFe8zC/giphy.gif);
+  
   }
+
+  /*RW changing border sizing for arrows to percentages*/
 
   .arrow {
     border: solid #ddd;
-    border-width: 0 3px 3px 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: .2%;
+    border-bottom: .2%;
     display: inline-block;
     padding: 3px;
   }
@@ -123,6 +133,8 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;;
   }
 
+  /* Tarot Card styling */
+  
   .flip {
     transform: scaleY(-1);
   }
@@ -137,6 +149,8 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 25px;
   }
+
+
 
 /* About Tarot CSS */
 #aboutTarot{
