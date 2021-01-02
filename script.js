@@ -40,10 +40,11 @@ $(document).ready(function () {
 			var cardData;
 
 			function showCards(data) {
-				$('#0').click(function() {
+				$('#0').one("click", function() {
 					if ($('#0').hasClass('flip')) {
 						$('#0').removeClass('flip');
 					}
+					$('#0').attr('class', 'activator');
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
@@ -52,12 +53,23 @@ $(document).ready(function () {
 					if (flip1 === true) {
 						$('#0').addClass('flip');
 					}
+
+					$('#title0').text(cardData.cards[randomCard].name);
+					if ($('#0').hasClass('flip')) {
+						$('#reveal0').text('Meaning: ' + cardData.cards[randomCard].meaning_rev);
+					}
+					else {
+						$('#reveal0').text('Meaning: ' + cardData.cards[randomCard].meaning_up);
+					}
+					
+
 				});
 
-				$('#1').click(function() {
+				$('#1').one("click", function() {
 					if ($('#1').hasClass('flip')) {
 						$('#1').removeClass('flip');
 					}
+					$('#1').attr('class', 'activator');
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
@@ -66,16 +78,22 @@ $(document).ready(function () {
 					if (flip2 === true) {
 						$('#1').addClass('flip');
 					}
-					var infoHold = $('<div class="textarea">');
-					var cardInfo1 = $(cardData.cards[randomCard].name);
-					$(infoHold).append(cardInfo1);
-					$('#1').append(infoHold);
+
+					$('#title1').text(cardData.cards[randomCard].name);
+					if ($('#1').hasClass('flip')) {
+						$('#reveal1').text('Meaning: ' + cardData.cards[randomCard].meaning_rev);
+					}
+					else {
+						$('#reveal1').text('Meaning: ' + cardData.cards[randomCard].meaning_up);
+					}
+					
 				});
 
-				$('#2').click(function() {
+				$('#2').one("click", function() {
 					if ($('#2').hasClass('flip')) {
 						$('#2').removeClass('flip');
 					}
+					$('#2').attr('class', 'activator');
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
@@ -84,6 +102,14 @@ $(document).ready(function () {
 					if (flip3 === true) {
 						$('#2').addClass('flip');
 					}
+
+					$('#title2').text(cardData.cards[randomCard].name);
+					if ($('#2').hasClass('flip')) {
+						$('#reveal2').text('Meaning: ' + cardData.cards[randomCard].meaning_rev);
+					}
+					else {
+						$('#reveal2').text('Meaning: ' + cardData.cards[randomCard].meaning_up);
+					}
 				});
 				};
 
@@ -91,13 +117,20 @@ $(document).ready(function () {
 					e.preventDefault();
 					$('.carousel').remove();
 					$('.ppfCards').attr('style', 'visibility: visible');
-					var cardDiv = $('<div>');
-					for (var i = 0; i < 3; i++) {
-						var cardBack = $('<img class="card-size" src=./assets/card-images/card-back.jpg>');
-						$(cardDiv).append(cardBack);
-						$(cardBack).attr('id', [i]);
-						$('#main').append(cardDiv);
-					}
+					//$('.ppfInfo').attr('style', 'visibility: visible');
+					// for (var i = 0; i < 3; i++) {
+					// 	var cardBack = $('<img class="activator" src=./assets/card-images/card-back.jpg>');
+					// 	//$(cardBack).attr('class', 'col s4');
+					
+					// 	$('.card-image').append(cardBack);
+
+					// 	//$('.ppfCards').append(cardBack);
+					// 	$(cardBack).attr('id', [i]);
+					// 	//$('#main').append(cardDiv);
+					// 	var fortune = $('<div class="col s4 card">');
+					// 	$(fortune).attr('id', 'info' + [i]);
+					// 	$('.ppfInfo').append(fortune);
+					// }
 					showCards();
 					// Button on slide 2 is pressed
 					// Carousel is hidden. Card deck is displayed
@@ -114,7 +147,8 @@ $(document).ready(function () {
 				// Insert background image for slide 1 or appropriate color palette 
 
 				$('.ppfTitle').text('Past - Present - Future Spread');
-				$('.ppfInfo').text('A classic spread. Use the tarot to explore your past, present, and future.');
+				// REACTIVATE PPF INFO OR RENAME IT
+				//$('.ppfInfo').text('A classic spread. Use the tarot to explore your past, present, and future.');
 				$('.btn').text('See my spread');
 
 				/*
