@@ -14,7 +14,7 @@ body {
     background-image: url(./assets/moon&stars.gif);
     background-size: 52% 50%;
   }
-
+  
   /* Setting navbar style*/
 
   nav {
@@ -70,6 +70,44 @@ body {
    
   }
 
+
+  /*testing Carousel Buttons- YJK*/
+
+  .controlButton {
+    top: 50%;
+    display: inline-block;
+    border:none;
+    outline: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #ddd;
+    
+  }
+
+  .controlButton:hover {
+    background: #888888;
+    background-image: url(https://media.giphy.com/media/raJa0mPRFe8zC/giphy.gif);
+  }
+
+  .arrow {
+    border: solid #ddd;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .buttonright {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+  .buttonleft {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+
+/*testing Carousel Buttons- YJK
+
   /* footer style */
   
   .page-footer {
@@ -88,8 +126,6 @@ body {
   .flip {
     transform: scaleY(-1);
   }
-<<<<<<< HEAD
-=======
 
   .card-size {
    
@@ -184,4 +220,3 @@ font-size:14px;
 color:green;
 text-align:center;
 }
->>>>>>> 8d350a68371003461aed91d4034a3e6c3ddf58fc
