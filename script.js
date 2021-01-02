@@ -46,18 +46,50 @@ $(document).ready(function () {
 					var randomCard = Math.floor(Math.random() * cardData.cards.length);
 					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 					cardImage = (cardData.cards[randomCard].name_short);
-					$('img').attr('src', './assets/card-images/' + cardImage + '.png');
-				})};
+					$('#0').attr('src', './assets/card-images/' + cardImage + '.png');
+					var flip1 = Math.random() < 0.5;
+					if (flip1 === true) {
+						$('#0').addClass('flip');
+					}
+				});
 
-				
-				var cards = ["fool", "man", "magician"];
-        		console.log(cards[Math.floor(Math.random() * cards.length)]);
+				$('#1').click(function() {
+					if ($('#1').hasClass('flip')) {
+						$('#1').removeClass('flip');
+					}
+					var randomCard = Math.floor(Math.random() * cardData.cards.length);
+					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
+					cardImage = (cardData.cards[randomCard].name_short);
+					$('#1').attr('src', './assets/card-images/' + cardImage + '.png');
+					var flip2 = Math.random() < 0.5;
+					if (flip2 === true) {
+						$('#1').addClass('flip');
+					}
+					var infoHold = $('<div class="textarea">');
+					var cardInfo1 = $(cardData.cards[randomCard].name);
+					$(infoHold).append(cardInfo1);
+					$('#1').append(infoHold);
+				});
 
-
+				$('#2').click(function() {
+					if ($('#2').hasClass('flip')) {
+						$('#2').removeClass('flip');
+					}
+					var randomCard = Math.floor(Math.random() * cardData.cards.length);
+					console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
+					cardImage = (cardData.cards[randomCard].name_short);
+					$('#2').attr('src', './assets/card-images/' + cardImage + '.png');
+					var flip3 = Math.random() < 0.5;
+					if (flip3 === true) {
+						$('#2').addClass('flip');
+					}
+				});
+				};
 
 				$('.ppfBtn').click(function (e) {
 					e.preventDefault();
 					$('.carousel').remove();
+					$('.ppfCards').attr('style', 'visibility: visible');
 					var cardDiv = $('<div>');
 					for (var i = 0; i < 3; i++) {
 						var cardBack = $('<a class="card"><img src=./assets/card-images/card-back.jpg></a>');
