@@ -7,12 +7,12 @@ $(document).ready(function () {
 	M.Carousel.init(elems);
 
 	// Carousel loop function
-	setInterval(function () {
-		M.Carousel.getInstance(elems).next();
-	}, duration);
-	$(document).ready(function () {
-		$('.carousel').carousel();
-	});
+	// setInterval(function () {
+	// 	M.Carousel.getInstance(elems).next();
+	// }, duration);
+	// $(document).ready(function () {
+	// 	$('.carousel').carousel();
+	// });
 
 	const settings = {
 		"async": true,
