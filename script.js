@@ -6,13 +6,26 @@ $(document).ready(function () {
 	// Initiate carousel transition
 	M.Carousel.init(elems);
 
-	// Carousel loop function
+	// // Carousel loop function
 	// setInterval(function () {
 	// 	M.Carousel.getInstance(elems).next();
 	// }, duration);
 	// $(document).ready(function () {
 	// 	$('.carousel').carousel();
 	// });
+
+	//Buttons LEFT and RIGHT// YJK
+	$('.moveNextCarousel').click(function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$('.carousel').carousel('next');
+	});
+	$('.movePrevCarousel').click(function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$('.carousel').carousel('prev');
+	});
+	// Buttons left and right// YJK testing
 
 	const settings = {
 		"async": true,
@@ -120,6 +133,11 @@ $(document).ready(function () {
 			cardData.cards.splice(randomCard, 1);
 
 		});
+
+		
+
+
+
 	};
 
 	$('.ppfBtn').click(function (e) {
@@ -160,20 +178,6 @@ $(document).ready(function () {
 	//$('.ppfInfo').text('A classic spread. Use the tarot to explore your past, present, and future.');
 	$('.btn').text('See my spread');
 
-
-	//Buttons LEFT and RIGHT// YJK Testing
-	$('.moveNextCarousel').click(function (e) {
-		e.preventDefault();
-		e.stopPropagation();
-		$('.carousel').carousel('next');
-	});
-	$('.movePrevCarousel').click(function (e) {
-		e.preventDefault();
-		e.stopPropagation();
-		$('.carousel').carousel('prev');
-	});
-	// Buttons left and right// YJK testing
-	
 	/*
 
 	First Page: 
