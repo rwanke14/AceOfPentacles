@@ -26,7 +26,7 @@ $(document).ready(function () {
     var cardData;
 
     function showCards(data) {
-        
+
         $('#card1').one("click", function (e) {
             if ($('#card1').hasClass('flip')) {
                 $('#card1').removeClass('flip');
