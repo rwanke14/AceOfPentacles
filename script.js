@@ -10,15 +10,9 @@ $(document).ready(function () {
 	// setInterval(function () {
 	// 	M.Carousel.getInstance(elems).next();
 	// }, duration);
-<<<<<<< HEAD
-	$(document).ready(function () {
-		$('.carousel').carousel();
-	});
-=======
 	// $(document).ready(function () {
 	// 	$('.carousel').carousel();
 	// });
->>>>>>> 56ec40e9bb0dd395fe6006096f9ebb3b36ae652d
 
 	const settings = {
 		"async": true,

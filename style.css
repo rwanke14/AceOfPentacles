@@ -2,7 +2,10 @@
 font-family: 'Montserrat Alternates', sans-serif;*/
 
 
+
 /* body set with background color and graphic with stars and moon*/
+
+
 
 body {
     display: flex;
@@ -11,7 +14,7 @@ body {
     background-color: #293c53;
     background-repeat: no-repeat;
     background-size: 140%;
-    background-image: url(./assets/moon&stars.gif);
+    background-image: url(./assets/css-images/moon&stars.gif);
     background-size: 52% 50%;
   }
   
@@ -49,6 +52,18 @@ body {
 
   }
 
+  /* .card {
+    margin-top: 30%;
+    background-color: #C29F38;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    width: 60em;
+    height: 34rem;
+    padding: 2%;
+    
+  } */
+
   .carousel-item {
     background-color: #C29F38;
     font-family: 'Montserrat', sans-serif;
@@ -82,11 +97,7 @@ body {
     display: inline-block;
     border:none;
     outline: none;
-<<<<<<< HEAD
-    padding: 1%;
-=======
-    padding: 1% 2%;
->>>>>>> 56ec40e9bb0dd395fe6006096f9ebb3b36ae652d
+    padding: 1.5%;
     font-size: 20px;
     color: #ddd;
     
@@ -107,7 +118,7 @@ body {
     border-right: .2%;
     border-bottom: .2%;
     display: inline-block;
-    padding: 100%;
+    padding: 100%
   }
   
   .buttonright {
@@ -129,12 +140,12 @@ body {
     background-color: #b0a36c;
     font-family: 'Montserrat Alternates', sans-serif;
     color: #DDE1E9;
-    font-family: 'Montserrat Alternates', sans-serif;;
+
   }
 
   .navColor {
     color: #DDE1E9;
-    font-family: 'Montserrat Alternates', sans-serif;;
+    font-family: 'Montserrat Alternates', sans-serif;
   }
 
   /* Tarot Card styling */
@@ -145,6 +156,17 @@ body {
 
   .card-size {
    
+    width: 25%;
+   }
+ 
+   .card-format {
+     background-color: #C29F38;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     margin-bottom: 25px;
+   }
+
+  /* .card-size {
+   
    width: 25%;
   }
 
@@ -154,87 +176,137 @@ body {
     margin-bottom: 25px;
   }
 
+  .card-title {
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: left;
+  } */
+
 
 
 /* About Tarot CSS */
 #aboutTarot{
  
   height: 110%;
-  
- 
 
 }
 
+/* #textbox {
 
+  width: 50rem;
+  height: 35rem;
 
+} */
 
 
   /* CONTACT CSS */
 
-#contactTeam{
+#contactTeam {
 
   margin-left: 23%;
   color: #DDE1E9;
 }
 
-#mainform{
-width:960px;
-margin-left: 15%;
-padding-top:20px;
-float: right;
-font-family: 'Montserrat Alternates', sans-serif;
-}
-#form{
-border-radius:2px;
-padding:20px 30px;
-box-shadow:0 0 15px;
-font-size:14px;
-font-weight:bold;
-width:350px;
-margin:20px 250px 0 35px;
-float: right;
-background-color: #E7BD42;
-font-family: 'Montserrat Alternates', sans-serif;
-}
-h3{
-text-align: center;
-font-size:20px;
-font-family: 'Montserrat Alternates', sans-serif;
+#mainform {
 
-
-;
+  width:960px;
+  margin-left: 15%;
+  padding-top:20px;
+  float: right;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
-input{
-width:100%;
-height:35px;
-margin-top:5px;
-border:30px solid  #293c53;
-border-radius:3px;
-padding:5px;
+
+#form {
+
+  border-radius:2px;
+  padding: 2% 3%;
+  box-shadow:0 0 15px;
+  font-size:14px;
+  font-weight:bold;
+  width:70%;
+  /* margin:20px 250px 0 35px; */
+  margin: 10% 12% 0 10%;
+  float: right;
+  background-color: #E7BD42;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h3 {
+  text-align: center;
+  font-size:20px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: white;
+
+}
+input {
+
+  width:100%;
+  height:35px;
+  margin-top:5px;
+  border:30px solid  #293c53;
+  border-radius:3px;
+  padding:5px;
 }
 input[type=button]{
-background-color:#123456;
-border:1px solid white;
-font-size:18px;
-color:white;
+
+  background-color:#123456;
+  border:1px solid white;
+  font-size:18px;
+  color:white;
 }
-textarea{
-width:100%;
-height:80px;
-margin-top:5px;
-border-radius:3px;
-padding:5px;
-resize:none;
+
+textarea {
+
+  width:100%;
+  height:80px;
+  margin-top:5px;
+  border-radius:3px;
+  padding:5px;
+  resize:none;
 }
-span{
-color:red
+
+/* span {
+
+  color:red
+} */
+
+#note {
+
+  color:black;
+  font-Weight:400;
+  
 }
-#note{
-color:black;
-font-Weight:400;
+
+#returnmessage {
+
+  font-size:14px;
+  color:green;
+  text-align:center;
+
 }
-#returnmessage{
-font-size:14px;
-color:green;
-text-align:center;
+
+/*Celtic Cross CSS*/
+/* 
+.spread {
+  width: 20%;
 }
+
+
+#column1, #column3 {
+
+  margin-top: 150px;
+
+}
+
+#sideways {
+  
+  width: 69px;
+  height: 48px;
+
+}
+
+#fullspread {
+
+  margin-top: 20%;
+  
+} */
