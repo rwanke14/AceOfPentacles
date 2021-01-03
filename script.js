@@ -111,7 +111,7 @@ $(document).ready(function () {
 			if ($('#2').hasClass('flip')) {
 				$('#2').removeClass('flip');
 			}
-			//$('#2').attr('class', 'activator');
+			$('#2').attr('class', 'activator');
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
 			console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 			cardImage = (cardData.cards[randomCard].name_short);
@@ -128,7 +128,6 @@ $(document).ready(function () {
 			else {
 				$('#reveal2').text('Meaning: ' + cardData.cards[randomCard].meaning_up);
 			}
-			$('#2').attr('class', 'activator');
 
 			// Remove selected card from array to prevent duplicate card pulls
 			cardData.cards.splice(randomCard, 1);
