@@ -52,8 +52,7 @@ body {
 
   }
 
-
-  /* .card {
+    #horoscopeDiv {
     margin-top: 30%;
     background-color: #C29F38;
     color: white;
@@ -63,7 +62,7 @@ body {
     height: 34rem;
     padding: 2%;
     
-  } */
+  }
 
   .carousel-item {
     background-color: #C29F38;
