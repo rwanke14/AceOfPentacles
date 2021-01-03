@@ -46,6 +46,9 @@ $(document).ready(function () {
 		console.log(data);
 		console.log(data.cards[20].name);
 		cardData = data;
+		cardData.cards[41].meaning_rev = "A relationship becomes less significant than originally expected." +
+		" Friends rather than lovers. Old issues may block new love. With the Hermit, High Priestess, or" + 
+		" other reversed cards, a need to be on your own. --Rachel Pollack, The New Tarot Handbook";
 	});
 
 	var cardData;
@@ -73,6 +76,8 @@ $(document).ready(function () {
 				$('#reveal0').text('Meaning: ' + cardData.cards[randomCard].meaning_up);
 			}
 
+			// Remove selected card from array to prevent duplicate card pulls
+			cardData.cards.splice(randomCard, 1);
 
 		});
 
@@ -98,13 +103,15 @@ $(document).ready(function () {
 				$('#reveal1').text('Meaning: ' + cardData.cards[randomCard].meaning_up);
 			}
 
-		});
+			// Remove selected card from array to prevent duplicate card pulls
+			cardData.cards.splice(randomCard, 1);
+		});	
 
 		$('#2').one("click", function () {
 			if ($('#2').hasClass('flip')) {
 				$('#2').removeClass('flip');
 			}
-			$('#2').attr('class', 'activator');
+			//$('#2').attr('class', 'activator');
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
 			console.log(cardData.cards[randomCard].name + " " + cardData.cards[randomCard].name_short);
 			cardImage = (cardData.cards[randomCard].name_short);
@@ -121,6 +128,11 @@ $(document).ready(function () {
 			else {
 				$('#reveal2').text('Meaning: ' + cardData.cards[randomCard].meaning_up);
 			}
+			$('#2').attr('class', 'activator');
+
+			// Remove selected card from array to prevent duplicate card pulls
+			cardData.cards.splice(randomCard, 1);
+
 		});
 
 		
