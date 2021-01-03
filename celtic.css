@@ -52,8 +52,7 @@ body {
 
   }
 
-
-  /* .card {
+  .card {
     margin-top: 30%;
     background-color: #C29F38;
     color: white;
@@ -63,7 +62,7 @@ body {
     height: 34rem;
     padding: 2%;
     
-  } */
+  }
 
   .carousel-item {
     background-color: #C29F38;
@@ -186,18 +185,9 @@ body {
 
 
 /* About Tarot CSS */
-
 #aboutTarot{
  
   height: 110%;
-  margin-top: 30%;
-  background-color: #C29F38;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  width: 60em;
-  height: 35rem;
-  padding: 2%;
 
 }
 
@@ -296,3 +286,30 @@ textarea {
 }
 
 
+
+
+/* Celtic Cross CSS*/
+
+.spread {
+  width: 20%;
+}
+
+
+#column1, #column3 {
+
+  margin-top: 150px;
+
+}
+
+#sideways {
+  
+  width: 69px;
+  height: 48px;
+
+}
+
+#fullspread {
+
+  margin-top: 20%;
+  
+}
