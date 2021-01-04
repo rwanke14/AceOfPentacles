@@ -42,13 +42,16 @@ body {
   /* setting main content styles*/
   main {
     flex: 1 0 auto;
+ 
   }
+
 
   /* carousel style */
   .carousel {
 
     margin-top: 30%;
     background-color: #E7BD42;
+    position: absolute;
 
   }
 
@@ -148,6 +151,8 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
   }
 
+
+
   /* Tarot Card styling */
   
   .flip {
@@ -163,6 +168,12 @@ body {
      background-color: #C29F38;
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
      margin-bottom: 25px;
+   }
+
+   .card {
+
+    background-color: #C29F38;
+
    }
 
   /* .card-size {
