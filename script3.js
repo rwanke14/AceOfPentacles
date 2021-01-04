@@ -25,6 +25,7 @@ $(document).ready(function () {
 		}
 	);
 
+
 	var cardData;
 	showCards(cardData);
 	function showCards(data) {
@@ -38,7 +39,8 @@ $(document).ready(function () {
 				cardData.cards[randomCard].name +
 					" " +
 					cardData.cards[randomCard].name_short
-			);
+            );$(".celticTitle").text("Card 1: " + cardData.cards[randomCard].name)
+            $(".celticPos").text("Where you are right now.")
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card1").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip1 = Math.random() < 0.5;
@@ -48,11 +50,12 @@ $(document).ready(function () {
 
 			$("#cardtitle1").text(cardData.cards[randomCard].name);
 			if ($("#card1").hasClass("flip")) {
-				$("#cardreveal1").text(
-					"Meaning: " + cardData.cards[randomCard].meaning_rev
-				);
+				$(".celticRead").text(
+                    "Meaning: " + cardData.cards[randomCard].meaning_rev
+                );
+                
 			} else {
-				$("#cardreveal1").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
 			}
@@ -68,7 +71,8 @@ $(document).ready(function () {
 				cardData.cards[randomCard].name +
 					" " +
 					cardData.cards[randomCard].name_short
-			);
+            );$(".celticTitle").text("Card 2: "+ cardData.cards[randomCard].name)
+            $(".celticPos").text("Potential/Challenges.")
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card2").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip2 = Math.random() < 0.5;
@@ -78,11 +82,11 @@ $(document).ready(function () {
 
 			$("#cardtitle2").text(cardData.cards[randomCard].name);
 			if ($("#card2").hasClass("flip")) {
-				$("#cardreveal2").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
 			} else {
-				$("#cardreveal2").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
 			}
@@ -98,7 +102,8 @@ $(document).ready(function () {
 				cardData.cards[randomCard].name +
 					" " +
 					cardData.cards[randomCard].name_short
-			);
+            );$(".celticTitle").text("Card 3: "+ cardData.cards[randomCard].name)
+            $(".celticPos").text("What to focus on.")
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card3").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip3 = Math.random() < 0.5;
@@ -108,11 +113,11 @@ $(document).ready(function () {
 
 			$("#cardtitle3").text(cardData.cards[randomCard].name);
 			if ($("#card3").hasClass("flip")) {
-				$("#cardreveal3").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
 			} else {
-				$("#cardreveal3").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
 			}
@@ -128,7 +133,8 @@ $(document).ready(function () {
 				cardData.cards[randomCard].name +
 					" " +
 					cardData.cards[randomCard].name_short
-			);
+            );$(".celticTitle").text("Card 4: "+ cardData.cards[randomCard].name)
+            $(".celticPos").text("Your past.")
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card4").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip4 = Math.random() < 0.5;
@@ -138,11 +144,11 @@ $(document).ready(function () {
 
 			$("#cardtitle4").text(cardData.cards[randomCard].name);
 			if ($("#card4").hasClass("flip")) {
-				$("#cardreveal4").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
 			} else {
-				$("#cardreveal4").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
 			}
@@ -158,7 +164,8 @@ $(document).ready(function () {
 				cardData.cards[randomCard].name +
 					" " +
 					cardData.cards[randomCard].name_short
-			);
+            ); $(".celticTitle").text("Card 5: "+ cardData.cards[randomCard].name)
+            $(".celticPos").text("Your strengths.")
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card5").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip5 = Math.random() < 0.5;
@@ -168,11 +175,11 @@ $(document).ready(function () {
 
 			$("#cardtitle5").text(cardData.cards[randomCard].name);
 			if ($("#card5").hasClass("flip")) {
-				$("#cardreveal5").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
 			} else {
-				$("#cardreveal5").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
 			}
@@ -188,7 +195,8 @@ $(document).ready(function () {
 				cardData.cards[randomCard].name +
 					" " +
 					cardData.cards[randomCard].name_short
-			);
+            );$(".celticTitle").text("Card 6: "+ cardData.cards[randomCard].name)
+            $(".celticPos").text("Near future.")
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card6").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip6 = Math.random() < 0.5;
@@ -198,11 +206,11 @@ $(document).ready(function () {
 
 			$("#cardtitle6").text(cardData.cards[randomCard].name);
 			if ($("#card6").hasClass("flip")) {
-				$("#cardreveal6").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
 			} else {
-				$("#cardreveal6").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
 			}
@@ -217,7 +225,8 @@ $(document).ready(function () {
 				cardData.cards[randomCard].name +
 					" " +
 					cardData.cards[randomCard].name_short
-			);
+            );$(".celticTitle").text("Card 7: "+ cardData.cards[randomCard].name)
+            $(".celticPos").text("Suggested approach.")
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card7").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip7 = Math.random() < 0.5;
@@ -227,11 +236,11 @@ $(document).ready(function () {
 
 			$("#cardtitle7").text(cardData.cards[randomCard].name);
 			if ($("#card7").hasClass("flip")) {
-				$("#cardreveal7").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
 			} else {
-				$("#cardreveal7").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
 			}
@@ -246,7 +255,8 @@ $(document).ready(function () {
 				cardData.cards[randomCard].name +
 					" " +
 					cardData.cards[randomCard].name_short
-			);
+            );$(".celticTitle").text("Card 8: "+ cardData.cards[randomCard].name)
+            $(".celticPos").text("Hopes and fears.")
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card8").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip8 = Math.random() < 0.5;
@@ -256,11 +266,11 @@ $(document).ready(function () {
 
 			$("#cardtitle8").text(cardData.cards[randomCard].name);
 			if ($("#card8").hasClass("flip")) {
-				$("#cardreveal8").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
 			} else {
-				$("#cardreveal8").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
 			}
@@ -275,7 +285,8 @@ $(document).ready(function () {
 				cardData.cards[randomCard].name +
 					" " +
 					cardData.cards[randomCard].name_short
-			);
+            );$(".celticTitle").text("Card 9: "+ cardData.cards[randomCard].name)
+            $(".celticPos").text("Hopes and fears.")
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card9").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip9 = Math.random() < 0.5;
@@ -285,16 +296,17 @@ $(document).ready(function () {
 
 			$("#cardtitle9").text(cardData.cards[randomCard].name);
 			if ($("#card9").hasClass("flip")) {
-				$("#cardreveal9").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
 			} else {
-				$("#cardreveal9").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
 			}
 		});
-		$("#card10").one("click", function () {
+        $("#card10").one("click", function () 
+        {
 			if ($("#card10").hasClass("flip")) {
 				$("#card10").removeClass("flip");
 			}
@@ -304,7 +316,8 @@ $(document).ready(function () {
 				cardData.cards[randomCard].name +
 					" " +
 					cardData.cards[randomCard].name_short
-			);
+            );$(".celticTitle").text("Card 10: "+ cardData.cards[randomCard].name)
+            $(".celticPos").text("Your potential future.")
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card10").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip10 = Math.random() < 0.5;
@@ -312,16 +325,19 @@ $(document).ready(function () {
 				$("#card10").addClass("flip");
 			}
 
-			$("#cardtitle10").text(cardData.cards[randomCard].name);
+			$("#cardtitle10").text("Card 10: "+ cardData.cards[randomCard].name);
 			if ($("#card10").hasClass("flip")) {
-				$("#cardreveal10").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
 			} else {
-				$("#cardreveal10").text(
+				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
-			}
+            }
+            
 		});
-	}
+    }
+    
+
 });
