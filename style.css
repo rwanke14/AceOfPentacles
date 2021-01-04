@@ -208,6 +208,8 @@ body {
 } */
 
 
+
+
   /* CONTACT CSS */
 
 #contactTeam {
@@ -294,4 +296,21 @@ textarea {
 
 }
 
+/* 10 Card Spread*/
+#celticBox{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 300px;
+  background-color: #C29F38;
+  color: white;
+}
 
+
+.cardnum {
+  text-align: center;
+  color: grey;
+  font-size: 150%;
+  margin: 0;
+  padding: 0;
+}
