@@ -21,7 +21,7 @@ $(document).ready(function() {
 	
 	
 	// Returns successful data submission message when the entered information is stored in database.
-	$.post("contact_form.php", {
+	$.post("smtp.elasticemail.com", {
 	name1: name,
 	email1: email,
 	message1: message,
