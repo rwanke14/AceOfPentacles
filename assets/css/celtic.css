@@ -1,4 +1,4 @@
-/*font-family: 'Montserrat', sans-serif;
+/* font-family: 'Montserrat', sans-serif;
 font-family: 'Montserrat Alternates', sans-serif;*/
 
 
@@ -316,19 +316,22 @@ textarea {
   
 }
 
-/* 10 Card Spread*/
-
+/* 10 Card Spread: YJK*/
 
 #celticContainer{
   position: fixed;
-  height: 100%;
-  width: 400px;
+  width: 25%;
   position: fixed;
   z-index: 1;
   top: 1;
   right: 0;
   overflow-x: hidden;
   padding-top: 20px;
+}
+
+.celticPos{
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 #celticBox{
