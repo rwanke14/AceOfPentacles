@@ -157,6 +157,7 @@ body {
   
   .flip {
     transform: scaleY(-1);
+    color: black;
   }
 
   .card-size {
@@ -170,34 +171,22 @@ body {
      margin-bottom: 25px;
    }
 
-   .card {
+#reveal1 {
+  color: black;
+}
 
-    background-color: #C29F38;
+.card-title {
+  color: black;
+}
 
-   }
-
-  /* .card-size {
-   
-   width: 25%;
-  }
-
-  .card-format {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-  }
-
-  .card-title {
-    color: white;
-    font-family: 'Montserrat Alternates', sans-serif;
-    text-align: left;
-  } */
-
+.card-content {
+  color:black; 
+}
 
 
 /* About Tarot CSS */
 
-#aboutTarot{
+/* #aboutTarot{
  
   height: 110%;
   margin-top: 30%;
@@ -209,7 +198,7 @@ body {
   height: 35rem;
   padding: 2%;
 
-}
+} */
 
 /* #textbox {
 
