@@ -37,6 +37,7 @@ $(document).ready(function () {
         <p><strong>Sign:</strong> ${
 					sign.charAt(0).toUpperCase() + sign.slice(1)
 				}</p>
+				<p><strong>Todays Date:</strong> ${response.current_date}</p>
 	    <p><strong>Todays Reading:</strong> ${response.description}</p>
 	    <p><strong>Compatibility: </strong> ${response.compatibility}</p>
 	    <p><strong>Lucky Number: </strong>${response.lucky_number}</p>
