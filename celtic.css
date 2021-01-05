@@ -320,13 +320,12 @@ textarea {
 
 
 #celticContainer{
-  margin-top: 5%;
   position: fixed;
   height: 100%;
   width: 400px;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: 1;
   right: 0;
   overflow-x: hidden;
   padding-top: 20px;
