@@ -14,7 +14,7 @@ body {
     background-color: #293c53;
     background-repeat: no-repeat;
     background-size: 140%;
-    background-image: url(./assets/css-images/moon&stars.gif);
+    background-image: url(../css-images/moon&stars.gif);
     background-size: 52% 50%;
   }
   
@@ -42,17 +42,20 @@ body {
   /* setting main content styles*/
   main {
     flex: 1 0 auto;
+ 
   }
+
 
   /* carousel style */
   .carousel {
 
     margin-top: 30%;
     background-color: #E7BD42;
+    position: absolute;
 
   }
 
-  .card {
+    #horoscopeDiv {
     margin-top: 30%;
     background-color: #C29F38;
     color: white;
@@ -148,10 +151,13 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
   }
 
+
+
   /* Tarot Card styling */
   
   .flip {
     transform: scaleY(-1);
+    color: black;
   }
 
   .card-size {
@@ -165,31 +171,34 @@ body {
      margin-bottom: 25px;
    }
 
-  /* .card-size {
-   
-   width: 25%;
-  }
+#reveal1 {
+  color: black;
+}
 
-  .card-format {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-  }
+.card-title {
+  color: black;
+}
 
-  .card-title {
-    color: white;
-    font-family: 'Montserrat Alternates', sans-serif;
-    text-align: left;
-  } */
-
+.card-content {
+  color:black; 
+}
 
 
 /* About Tarot CSS */
-#aboutTarot{
+
+/* #aboutTarot{
  
   height: 110%;
+  margin-top: 30%;
+  background-color: #C29F38;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  width: 60em;
+  height: 35rem;
+  padding: 2%;
 
-}
+} */
 
 /* #textbox {
 
@@ -197,6 +206,8 @@ body {
   height: 35rem;
 
 } */
+
+
 
 
   /* CONTACT CSS */
@@ -286,30 +297,3 @@ textarea {
 }
 
 
-
-
-/* Celtic Cross CSS*/
-
-.spread {
-  width: 20%;
-}
-
-
-#column1, #column3 {
-
-  margin-top: 150px;
-
-}
-
-#sideways {
-  
-  width: 69px;
-  height: 48px;
-
-}
-
-#fullspread {
-
-  margin-top: 20%;
-  
-}

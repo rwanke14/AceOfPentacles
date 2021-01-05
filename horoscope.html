@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ace of Pentacles</title>
+  <title>Horoscope</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Montserrat:wght@300;400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
@@ -35,13 +35,19 @@
     <div class="col s12 m5">
       <div class="card-panel">
         <span class="white-text">
-          <input type="text" id="date" placeholder= "DATE (YYYY-MM-DD)" />
-          <button type= "submit" id= "submitDate">Submit</button>
+          <input type="text" id="month" placeholder="Birth Month" />
+          <input type="text" id="day" placeholder="Birth Day" />
+          <!-- <button id="submit">Submit</button>
+          <input type="text" id="date" placeholder= "DATE (YYYY-MM-DD)" /> -->
+          <button type= "submit" id= "submitDate" class="btn">Submit</button>
         </span>
       </div>
     </div>
+    <div class="col s12 m5">
+      <div class="main"></div>
+    </div>
   </div>
-            
+           
 
   
 
@@ -82,8 +88,12 @@
 <!-- Materialize scripts -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./horoscope.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
+  <script src="./assets/js/horoscope.js"></script>
+
+
 </body>
 
 </html>
