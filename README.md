@@ -1,33 +1,80 @@
-# Project1_GW
+# Ace of Pentacles
 
-Team: Ace of Pentacles
+Ace of Pentacles is a tarot reading and astrology application utilizing RESTful APIs to provide dynamic insights for users. 
 
-Description: Tarot card reader app with astrology functions.
+[Project Links]
 
-Tasks -
+Deployed application: https://rwanke14.github.io/AceOfPentacles/ 
 
-Rachel - CSS/HTML/Javascript/if/else/project management
+Github repo: https://github.com/rwanke14/AceOfPentacles 
 
-Frankie - CSS/HTML/Javascript/if/else
+[Project Screenshots]
 
-Amir - Javascript/Local storage master/APIs)
+![Homepage](./assets/screenshots/homepage.png)
 
-Johnnie - Javascript (for loops/Arrays/If/Else master/APIs)
+![About](./assets/screenshots/about.png)
 
-Young - Linter/Javascript
+![Past Present Future](./assets/screenshots/past-present-future.png)
 
-APIs:
+![Celtic Cross](./assets/screenshots/celtic.png)
 
-Astrologer API - https://astrologyapi.com/
+![Horoscope](./assets/screenshots/horoscope.png)
 
-Github APIs - see slack - https://github.com/howlCode/tarot_api - https://github.com/ekelen/tarot-api - https://github.com/howlCode/tarot_api
+![Contact](./assets/screenshots/contact.png)
 
-Mapping API/Searching Yelp API -
-Rapid API - https://rapidapi.com/ine0nite/api/astrology-horoscope/endpoints
+[User Instrucctions and Program Logic]
 
-![FrontPage-TarotCards](./assets/FrontPage.jpeg)
+Ace of Pentacles is a tarot and astrology application utiliizing two APIs: 
 
-![SecondPage-selectDeck](./assets/PickCardDeckPage.jpeg)
+Tarot API: https://github.com/ekelen/tarot-api 
 
-![TarotSortPage](./assets/TarotSortPage.jpeg)
+Astrology API: https://rapidapi.com/sameer.kumar/api/aztro 
 
+On opening the application, the user is shown a welcome slide. The user can click on arrow buttons on either side of the slide to swap slides. Three available slides to select: Past/Present/Future Spread, Celtic Cross Spread, and Horoscope. Each slide contains a button which when clicked will send the user to the respective page. 
+
+Past/Present/Future Spread: 
+
+User is presented with three facedown cards representing Past conditions, Present conditions, and Future conditions, respectively. On clicking the facedown card, a tarot card is randomly generated and revealed to the user. User can then click on the revealed card to bring up a slide providing the card's meaning. 
+
+Celtic Cross Spread: 
+
+Spread contains 10 cards. User clicks each facedown card in the provided numerical order, which randomly generates a card and reveals it. A text box on the right side of the screen provides card meaning. Clicking on a card again redisplays that card's meaning.
+
+Horoscope: 
+
+User is presented with an interactive submission box. Required fields are: Birth Month (MM) and birth day (DD). User enters required info and clicks Submit. User is presented with the current date, their Zodiac sign, and their horosocpe. User info is stored in local storage. Upon reloading the page, user is provided the new daily horoscope by default based on their previously entered information.
+
+About Tarot:
+
+Information for the user, explaining the tarot and its uses. 
+
+Contact Page:
+
+Contact form if user wishes to contact the developers. 
+
+[Contributors]
+
+Rachel Wanke - CSS/HTML/Project Management
+
+Frankie Rosado - CSS/HTML/Design
+
+Amir Ashtiany- Javascript/Local Storage/API
+
+Johnnie Simpson- Javascript/API/
+
+Young Ji Kim- Linter/Javascript
+
+[Developers Contact]
+
+1. Amir Ashtiany - https://github.com/Alexfit4
+2. Young Ji Kim - https://github.com/youjmi
+3. Frankie Rosado - https://github.com/Franciscorosado09
+4. Rachel Wanke: - https://github.com/rwanke14 
+
+[Acknowledgments]
+
+Thanks to Github user E Kelen for the Tarot card API. Visit E Kelen's Github page at: https://github.com/ekelen 
+
+Thanks to Sameer Kumar for the Horoscope API. Visit their RapidAPI profile at: https://rapidapi.com/user/sameer.kumar 
+
+Thanks to Boris Kladov for providing the base getZodiacSign() function, which was modified for our purposes. Visit his Github profile at: https://gist.github.com/kladov 
