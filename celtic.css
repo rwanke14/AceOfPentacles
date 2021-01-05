@@ -325,10 +325,11 @@ textarea {
 }
 
 #celticBox{
+  float: left;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: 300px;
+  width: 260%;
   background-color: #C29F38;
   color: white;
 }
