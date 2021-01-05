@@ -14,7 +14,7 @@ body {
     background-color: #293c53;
     background-repeat: no-repeat;
     background-size: 140%;
-    background-image: url(./assets/css-images/moon&stars.gif);
+    background-image: url(../css-images/moon&stars.gif);
     background-size: 52% 50%;
   }
   
@@ -307,21 +307,13 @@ textarea {
 
 }
 
-/* 10 Card Spread*/
-#celticBox{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 300px;
-  background-color: #C29F38;
-  color: white;
-}
 
 
-.cardnum {
-  text-align: center;
-  color: grey;
-  font-size: 150%;
-  margin: 0;
-  padding: 0;
+
+/* About Tarot */
+
+#aboutText {
+
+ text-align: right;
+
 }

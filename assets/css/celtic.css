@@ -14,7 +14,7 @@ body {
     background-color: #293c53;
     background-repeat: no-repeat;
     background-size: 140%;
-    background-image: url(./assets/css-images/moon&stars.gif);
+    background-image: url(../css-images/moon&stars.gif);
     background-size: 52% 50%;
   }
   
@@ -308,8 +308,44 @@ textarea {
 
 }
 
+
+
 #fullspread {
 
-  margin-top: 20%;
+  margin-top: 5%;
   
 }
+
+/* 10 Card Spread*/
+
+
+#celticContainer{
+  position: fixed;
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  z-index: 1;
+  top: 1;
+  right: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+#celticBox{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 260%;
+  background-color: #C29F38;
+  color: white;
+}
+
+
+.cardnum {
+  text-align: center;
+  color: grey;
+  font-size: 150%;
+  margin: 0;
+  padding: 0;
+}
+

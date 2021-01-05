@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Montserrat:wght@300;400&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Montserrat:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/celtic.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -24,39 +24,38 @@
                     <ul class="right hide-on-med-and-down">
                         <li><a href="aboutTarot.html">About Tarot</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
-                        
+
                     </ul>
                 </div>
             </nav>
     </header>
 
+ 
+    <!--Box to send description for 10 card spread-->
+    <div class = "row right-align w3-sidebar"> 
+        <div id="celticContainer">
+            <div class="col s12 m5">
+                <div class="card-panel" id="celticBox">
+                    <span></span>
+                    <h5 class="celticPos"></h5>
+                    <h5 class="celticTitle"></h5>
+                    <h6 class="celticRead">Please click your cards in numerical order and you shall see your spread!
+                    </h6>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    
 
     <div class="row" id="fullspread">
-
-        <!--Box to send description for 10 card spread-->
-        <div class="row">
-            <div id ="celticContainer">
-            <div class="col s12 m5">
-              <div class="card-panel" id="celticBox">
-                <span></span>
-                <h5 class ="celticPos"></h5>
-                <h5 class ="celticTitle"></h5>
-                <h6 class ="celticRead">Please click your cards in numerical order and you shall see your spread!</h6>
-                <br>
-              </div>
-            </div>
-          </div>
-        </div>
-
-         <!-- column 1 in spread -->          
+        <!-- column 1 in spread -->
         <div class="col s3" id="column1">
-            <p class ="cardnum">Card 4</p>
-            <div class="row spread" >
+            <p class="cardnum">Card 4</p>
+            <div class="row spread">
                 <div class="col s12 m5 ">
-                    <img src="./assets/card-images/card-back.jpg" id="card4" height ="200" width ="110">
-                        
+                    <img src="./assets/card-images/card-back.jpg" id="card4" height="200" width="110">
+
                     </img>
                 </div>
             </div>
@@ -64,40 +63,41 @@
 
         <!-- column 2 in spread -->
 
-    
+
         <div class="col s3" id="column2">
-            <p class ="cardnum">Card 5</p>
+            <p class="cardnum">Card 5</p>
             <div class="row spread">
                 <div class="col s12 m5">
-                    <img src="./assets/card-images/card-back.jpg" id="card5" height ="200" width ="110">
-                        
+                    <img src="./assets/card-images/card-back.jpg" id="card5" height="200" width="110">
+
                     </img>
                 </div>
             </div>
 
             <p class="cardnum">Card 1</p>
-            <div class="row spread" >
+            <div class="row spread">
                 <div class="col s12 m5">
-                    <img src="./assets/card-images/card-back.jpg" id="card1" height ="200" width ="110">
-                        
+                    <img src="./assets/card-images/card-back.jpg" id="card1" height="200" width="110">
+
                     </img>
                 </div>
             </div>
 
-            <p class ="cardnum"> Card 2</p>
-            <div class="row spread" >
+            <p class="cardnum"> Card 2</p>
+            <div class="row spread">
                 <div class="col s12 m5">
-                    <img src="./assets/card-images/card-back.jpg" id="card2" style="transform: rotate(90deg)" height ="200" width ="110">
-                        
+                    <img src="./assets/card-images/card-back.jpg" id="card2" style="transform: rotate(90deg)"
+                        height="200" width="110">
+
                     </img>
                 </div>
             </div>
 
             <p class="cardnum"> Card 3</p>
-            <div class="row spread" >
+            <div class="row spread">
                 <div class="col s12 m5">
-                    <img src="./assets/card-images/card-back.jpg" id="card3" height ="200" width ="110">
-                        
+                    <img src="./assets/card-images/card-back.jpg" id="card3" height="200" width="110">
+
                     </img>
                 </div>
             </div>
@@ -107,11 +107,11 @@
         <!-- column 3 in spread -->
 
         <div class="col s3" id="column3">
-            <p class =cardnum> Card 6</p>
-            <div class="row spread" >
+            <p class=cardnum> Card 6</p>
+            <div class="row spread">
                 <div class="col s12 m5">
-                    <img src="./assets/card-images/card-back.jpg" id="card6" height ="200" width ="110">
-                        
+                    <img src="./assets/card-images/card-back.jpg" id="card6" height="200" width="110">
+
                     </img>
                 </div>
             </div>
@@ -120,45 +120,45 @@
         <!-- column 4 in spread -->
 
         <div class="col s3" id="column4">
-            <p class ="cardnum">Card 10</p>
-            <div class="row spread" >
+            <p class="cardnum">Card 10</p>
+            <div class="row spread">
                 <div class="col s12 m5">
-                    <img src="./assets/card-images/card-back.jpg" id="card10" height ="200" width ="110">
+                    <img src="./assets/card-images/card-back.jpg" id="card10" height="200" width="110">
 
                     </img>
                 </div>
             </div>
-            <p class ="cardnum">Card 9</p>
-            <div class="row spread" >
+            <p class="cardnum">Card 9</p>
+            <div class="row spread">
                 <div class="col s12 m5">
-                    <img src="./assets/card-images/card-back.jpg" id="card9" height ="200" width ="110">
-                        
+                    <img src="./assets/card-images/card-back.jpg" id="card9" height="200" width="110">
+
                     </img>
                 </div>
             </div>
 
-            <p class= "cardnum">Card 8</p>
-            <div class="row spread" >
+            <p class="cardnum">Card 8</p>
+            <div class="row spread">
                 <div class="col s12 m5">
-                    <img src="./assets/card-images/card-back.jpg" id="card8" height ="200" width ="110">
-                        
+                    <img src="./assets/card-images/card-back.jpg" id="card8" height="200" width="110">
+
                     </img>
                 </div>
             </div>
 
-            <p class= "cardnum"> Card 7</p>
-            <div class="row spread" >
+            <p class="cardnum"> Card 7</p>
+            <div class="row spread">
                 <div class="col s12 m5">
-                    <img src="./assets/card-images/card-back.jpg" id="card7" height ="200" width ="110">
-                        
+                    <img src="./assets/card-images/card-back.jpg" id="card7" height="200" width="110">
+
                     </img>
                 </div>
             </div>
         </div>
     </div>
 
-    
- 
+
+
 
 
 
@@ -180,7 +180,6 @@
                     <ul>
                         <li><a class="grey-text text-lighten-3" href="aboutTarot.html">About Tarot</a></li>
                         <li><a class="grey-text text-lighten-3" href="contact.html">Contact Us</a></li>
-                        <li><a class="grey-text text-lighten-3" href="celtic.html">Celtic Cross Spread</a></li>
                         <li><a class="grey-text text-lighten-3" href="horoscope.html">Horoscopes</a></li>
                     </ul>
                 </div>
@@ -198,7 +197,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./script3.js"></script>
+    <script src="./assets/js/script3.js"></script>
 </body>
 
 </html>
