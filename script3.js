@@ -29,6 +29,7 @@ $(document).ready(function () {
 	var cardData;
 	showCards(cardData);
 	function showCards(data) {
+        //This calls for the First Card
 		$("#card1").one("click", function (e) {
 			if ($("#card1").hasClass("flip")) {
 				$("#card1").removeClass("flip");
@@ -40,7 +41,7 @@ $(document).ready(function () {
 					" " +
 					cardData.cards[randomCard].name_short
             );$(".celticTitle").text("Card 1: " + cardData.cards[randomCard].name)
-            $(".celticPos").text("Where you are right now.")
+            $(".celticPos").text('"Where you are right now"')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card1").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip1 = Math.random() < 0.5;
@@ -72,7 +73,7 @@ $(document).ready(function () {
 					" " +
 					cardData.cards[randomCard].name_short
             );$(".celticTitle").text("Card 2: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text("Potential/Challenges.")
+            $(".celticPos").text('"Potential/Challenges"')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card2").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip2 = Math.random() < 0.5;
@@ -103,7 +104,7 @@ $(document).ready(function () {
 					" " +
 					cardData.cards[randomCard].name_short
             );$(".celticTitle").text("Card 3: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text("What to focus on.")
+            $(".celticPos").text('"What to focus on"')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card3").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip3 = Math.random() < 0.5;
@@ -134,7 +135,7 @@ $(document).ready(function () {
 					" " +
 					cardData.cards[randomCard].name_short
             );$(".celticTitle").text("Card 4: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text("Your past.")
+            $(".celticPos").text('"Your past"')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card4").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip4 = Math.random() < 0.5;
@@ -165,7 +166,7 @@ $(document).ready(function () {
 					" " +
 					cardData.cards[randomCard].name_short
             ); $(".celticTitle").text("Card 5: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text("Your strengths.")
+            $(".celticPos").text('"Your strengths"')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card5").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip5 = Math.random() < 0.5;
@@ -196,7 +197,7 @@ $(document).ready(function () {
 					" " +
 					cardData.cards[randomCard].name_short
             );$(".celticTitle").text("Card 6: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text("Near future.")
+            $(".celticPos").text('"Near future"')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card6").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip6 = Math.random() < 0.5;
@@ -226,7 +227,7 @@ $(document).ready(function () {
 					" " +
 					cardData.cards[randomCard].name_short
             );$(".celticTitle").text("Card 7: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text("Suggested approach.")
+            $(".celticPos").text('"Suggested approach"')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card7").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip7 = Math.random() < 0.5;
@@ -256,7 +257,7 @@ $(document).ready(function () {
 					" " +
 					cardData.cards[randomCard].name_short
             );$(".celticTitle").text("Card 8: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text("Hopes and fears.")
+            $(".celticPos").text('"What you need to know"')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card8").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip8 = Math.random() < 0.5;
@@ -286,7 +287,7 @@ $(document).ready(function () {
 					" " +
 					cardData.cards[randomCard].name_short
             );$(".celticTitle").text("Card 9: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text("Hopes and fears.")
+            $(".celticPos").text('"Hopes and fears"')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card9").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip9 = Math.random() < 0.5;
@@ -317,7 +318,7 @@ $(document).ready(function () {
 					" " +
 					cardData.cards[randomCard].name_short
             );$(".celticTitle").text("Card 10: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text("Your potential future.")
+            $(".celticPos").text('"Your potential future"')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card10").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip10 = Math.random() < 0.5;
