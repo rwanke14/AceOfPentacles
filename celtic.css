@@ -308,8 +308,37 @@ textarea {
 
 }
 
+
+
 #fullspread {
 
   margin-top: 20%;
   
+}
+
+/* 10 Card Spread*/
+
+
+#celticContainer{
+  position: fixed;
+
+}
+
+#celticBox{
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 260%;
+  background-color: #C29F38;
+  color: white;
+}
+
+
+.cardnum {
+  text-align: center;
+  color: grey;
+  font-size: 150%;
+  margin: 0;
+  padding: 0;
 }
