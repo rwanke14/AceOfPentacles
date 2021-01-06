@@ -304,7 +304,6 @@ textarea {
 #celticContainer{
   position: fixed;
   width: 25%;
-  position: fixed;
   z-index: 5%;
   top: 8%;
   right: 0;
@@ -340,3 +339,44 @@ div #main .container{
 
 }
 
+
+@media only screen and (max-device-width: 800px) {
+  #celticBox{
+    text-align: center;
+    margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  padding: 2% 0 2% 0;
+  }
+
+.celticPos, .celticTitle{
+  font-size: 75%;
+}
+
+  .celticRead{
+    font-size: 75%;
+    text-align: center;
+    width: fit-content;
+  }
+
+#celticContainer{
+  position: absolute;
+  align-items: center;
+  width: 90%;
+}
+
+  #fullspread{
+    margin-top: 50%;
+  }
+
+.cardnum{
+  font-size: 80%;
+}
+  .cardback, .activator {
+    max-width: 5rem;
+    height: auto;
+  }
+  
+
+
+}

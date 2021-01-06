@@ -1,6 +1,9 @@
 $(document).ready(function () {
+<<<<<<< HEAD
 	// $(".carousel").carousel();
 
+=======
+>>>>>>> 62c25a8035a4d0a7523fb92df7a05bc849f4ae28
 	// Carousel time switch variables
 	const elems = document.querySelector(".carousel");
 	const duration = 6000; //milliseconds
