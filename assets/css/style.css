@@ -42,16 +42,16 @@ body {
   /* setting main content styles*/
   main {
     flex: 1 0 auto;
- 
+    margin-top: 150px;
   }
 
 
   /* carousel style */
   .carousel {
 
-    margin-top: 30%;
     background-color: #E7BD42;
     position: absolute;
+    margin-left: 5%;
 
   }
 
@@ -123,6 +123,8 @@ body {
     display: inline-block;
     padding: 100%
   }
+
+
   
   .buttonright {
     transform: rotate(-45deg);
@@ -151,12 +153,17 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
   }
 
-
+  .carousel-item{
+    transform: translateX(0px) !important;
+  }
 
   /* Tarot Card styling */
+
   
   .flip {
     transform: scaleY(-1);
+    color: black;
+    background-color: #C29F38;
   }
 
   .card-size {
@@ -170,28 +177,42 @@ body {
      margin-bottom: 25px;
    }
 
-   .card {
 
+
+   #detailsCard {
+
+    /* width: 501.75px; */
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+
+  }
+
+  #infoCard {
     background-color: #C29F38;
-
-   }
-
-  /* .card-size {
-   
-   width: 25%;
-  }
-
-  .card-format {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-  }
-
-  .card-title {
     color: white;
-    font-family: 'Montserrat Alternates', sans-serif;
-    text-align: left;
-  } */
+    font-family: 'Montserrat', sans-serif;
+    
+
+  }
+
+
+#title0, #title1, #title2 {
+  font-size: 18px;
+}
+
+.card-title {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.card {
+  background-color: #C29F38;
+
+
+}
+
 
 
 
@@ -205,18 +226,18 @@ body {
   color: white;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  width: 60em;
-  height: 35rem;
+  /* width: 60rem;
+  height: 35rem; */
   padding: 2%;
 
 }
 
-/* #textbox {
+#textbox {
 
   width: 50rem;
   height: 35rem;
 
-} */
+}
 
 
 
@@ -268,10 +289,11 @@ input {
   border:30px solid  #293c53;
   border-radius:3px;
   padding:5px;
+  background-color: white;
 }
 input[type=button]{
 
-  background-color:#123456;
+  background-color: #293c53;
   border:1px solid white;
   font-size:18px;
   color:white;
@@ -306,5 +328,18 @@ textarea {
   text-align:center;
 
 }
+
+#name, #email, #message, #contact{
+  background-color: white;
+  
+}
+
+.active {
+  color: white
+}
+
+
+
+
 
 
