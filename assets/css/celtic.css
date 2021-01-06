@@ -342,7 +342,7 @@ div #main .container{
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-device-width: 800px) {
   #celticBox{
     text-align: center;
     margin-left: auto;
@@ -362,6 +362,7 @@ div #main .container{
   }
 
 #celticContainer{
+  position: absolute;
   align-items: center;
   width: 90%;
 }
