@@ -17,8 +17,8 @@ $(document).ready(function () {
 		function (data) {
 			console.log(data);
 			cardData = data;
-		};
-	);
+	});
+	
 
 	$('#card1').click(function (e) { 
 		e.preventDefault();
