@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Ace of Pentacles</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
@@ -31,7 +31,7 @@
 
 <!-- carousel for main page to select card spread -->
 
-  <div class= "container" id="main" style="position: sticky;">
+  <div class= "container" id="main" style="position: sticky; margin-top:150px">
     <div class="carousel carousel-slider center">
       <!-- <div class="carousel-fixed-item center" data-ride="carousel">
         <a class="btn waves-effect darken-text-2">button</a>
@@ -75,11 +75,23 @@
         <button class='btn' onclick="location.href='celtic.html'">Get reading</button>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col s2" id="detailsCard">
+        <div class="card-panel" id="infoCard">
+          <span class="white-text">
+            <h1 style="font-size: x-large; text-align: center;">Past Present Future Tarot Card Reading</h1>
+           <p>Click the back of a card to get your past, present and future reading.</p> 
+          </span>
+        </div>
+      </div>
+    </div>
     
     <!-- Three card spread row -->
     <div class="container" id="ppfSpread">
     
     <div class="row ppfCards" style="visibility: hidden;">
+    
       <!-- Card 1 - Past -->
       <div class='card col s4'>
         <div class='card-image waves-effect waves-block waves-light'>
@@ -90,7 +102,7 @@
               class="material-icons right">more_vert</i></span>
         </div>
         <div class='card-reveal'>
-          <span class='card-title grey-text text-darken-4'><i class='material-icons right'>close</i></span>
+          <span class='card-title'><i class='material-icons right'>close</i></span>
           <p id="reveal0"></p>
         </div>
       </div>
