@@ -199,6 +199,9 @@ body {
 
 #title0, #title1, #title2 {
   font-size: 18px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
 }
 
 .card-title {
