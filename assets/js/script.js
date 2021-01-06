@@ -158,6 +158,7 @@ $(document).ready(function () {
 		e.preventDefault();
 		$(".carousel").remove();
 		$(".ppfCards").attr("style", "visibility: visible");
+		$('#detailsCard').attr('style', 'visibility: visible');
 		//$('.ppfInfo').attr('style', 'visibility: visible');
 		// for (var i = 0; i < 3; i++) {
 		// 	var cardBack = $('<img class="activator" src=./assets/card-images/card-back.jpg>');
