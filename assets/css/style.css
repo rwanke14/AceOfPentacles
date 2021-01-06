@@ -42,16 +42,16 @@ body {
   /* setting main content styles*/
   main {
     flex: 1 0 auto;
- 
+    margin-top: 150px;
   }
 
 
   /* carousel style */
   .carousel {
 
-    margin-top: 30%;
     background-color: #E7BD42;
     position: absolute;
+    margin-left: 5%;
 
   }
 
@@ -123,6 +123,8 @@ body {
     display: inline-block;
     padding: 100%
   }
+
+
   
   .buttonright {
     transform: rotate(-45deg);
@@ -151,13 +153,17 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
   }
 
-
+  .carousel-item{
+    transform: translateX(0px) !important;
+  }
 
   /* Tarot Card styling */
+
   
   .flip {
     transform: scaleY(-1);
     color: black;
+    background-color: #C29F38;
   }
 
   .card-size {
@@ -171,22 +177,48 @@ body {
      margin-bottom: 25px;
    }
 
-#reveal1 {
-  color: black;
+
+
+   #detailsCard {
+
+    /* width: 501.75px; */
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+
+  }
+
+  #infoCard {
+    background-color: #C29F38;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    
+
+  }
+
+
+#title0, #title1, #title2 {
+  font-size: 18px;
 }
 
 .card-title {
-  color: black;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
-.card-content {
-  color:black; 
+.card {
+  background-color: #C29F38;
+
+
 }
+
+
 
 
 /* About Tarot CSS */
 
-/* #aboutTarot{
+#aboutTarot{
  
   height: 110%;
   margin-top: 30%;
@@ -194,18 +226,18 @@ body {
   color: white;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  width: 60em;
-  height: 35rem;
+  /* width: 60rem;
+  height: 35rem; */
   padding: 2%;
 
-} */
+}
 
-/* #textbox {
+#textbox {
 
   width: 50rem;
   height: 35rem;
 
-} */
+}
 
 
 
@@ -257,10 +289,11 @@ input {
   border:30px solid  #293c53;
   border-radius:3px;
   padding:5px;
+  background-color: white;
 }
 input[type=button]{
 
-  background-color:#123456;
+  background-color: #293c53;
   border:1px solid white;
   font-size:18px;
   color:white;
@@ -295,5 +328,20 @@ textarea {
   text-align:center;
 
 }
+
+#name, #email, #message, #contact{
+  background-color: white;
+  
+}
+
+.active {
+  color: white
+}
+
+#submit {
+
+}
+
+
 
 
