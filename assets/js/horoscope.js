@@ -4,9 +4,6 @@ $(document).ready(function () {
 		// Pulling the value for the month and day when clicked
 		var day = $("#day").val();
 		var month = $("#month").val();
-		var d = new Date();
-		var today =
-			d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate();
 
 		// Calling the function and grabbing the day and month
 		var sign = getZodiacSign(day, month);
@@ -47,7 +44,10 @@ $(document).ready(function () {
         <p><strong>Lucky Time: </strong>${response.lucky_time}</p>`;
 
 				// Setting Local Storage
-				localStorage.setItem("Zodiac Sign", sign);
+				localStorage.setItem(
+					"Zodiac Sign",
+					sign.charAt(0).toUpperCase() + sign.slice(1)
+				);
 				localStorage.setItem("Day", day);
 				localStorage.setItem("Month", month);
 				localStorage.setItem("Todays Date", response.current_date);
@@ -56,20 +56,21 @@ $(document).ready(function () {
 				localStorage.setItem("Lucky Number", response.lucky_number);
 				localStorage.setItem("Lucky Time", response.lucky_time);
 			});
-			// update local storage daily 
-
+			// update local storage daily
 		}
 	});
 
 	$(day).val(localStorage.getItem("Day"));
 	$(month).val(localStorage.getItem("Month"));
 	if (
+		localStorage.getItem("Zodiac Sign") !== null &&
 		localStorage.getItem("Todays Date") !== null &&
 		localStorage.getItem("Todays Reading") !== null &&
 		localStorage.getItem("Compatibility") !== null &&
 		localStorage.getItem("Lucky Number") !== null &&
 		localStorage.getItem("Lucky Time") !== null
 	) {
+		$("#sign").text(`Sign: ${localStorage.getItem("Zodiac Sign")}`);
 		$("#todaysDate").text(
 			`Todays Date: ${localStorage.getItem("Todays Date")}`
 		);
@@ -79,8 +80,10 @@ $(document).ready(function () {
 		$("#compatibility").text(
 			`Todays Date: ${localStorage.getItem("Compatibility")}`
 		);
-		$("#luckyNum").text(`Todays Date: ${localStorage.getItem("Lucky Number")}`);
-		$("#luckTime").text(`Todays Date: ${localStorage.getItem("Lucky Time")}`);
+		$("#luckyNum").text(
+			`Lucky Number: ${localStorage.getItem("Lucky Number")}`
+		);
+		$("#luckTime").text(`Lucky Time: ${localStorage.getItem("Lucky Time")}`);
 	}
 
 	$("#clear").click(function (e) {
@@ -91,6 +94,7 @@ $(document).ready(function () {
 		localStorage.removeItem("Lucky Number");
 		localStorage.removeItem("Lucky Time");
 		$(".main").empty();
+		location.reload();
 	});
 
 	// Used Kladov/ getZodiacSign.js on github for the function... https://gist.github.com/kladov/5080233...
@@ -143,4 +147,6 @@ $(document).ready(function () {
 			return zodiacSigns.sag;
 		}
 	}
+
+	$(".modal").modal();
 });

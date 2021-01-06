@@ -78,3 +78,5 @@ Thanks to Github user E Kelen for the Tarot card API. Visit E Kelen's Github pag
 Thanks to Sameer Kumar for the Horoscope API. Visit their RapidAPI profile at: https://rapidapi.com/user/sameer.kumar 
 
 Thanks to Boris Kladov for providing the base getZodiacSign() function, which was modified for our purposes. Visit his Github profile at: https://gist.github.com/kladov 
+
+Thanks to Lena Helfinger for providing images for Horoscopes.  https://pixabay.com/users/lenahelfinger-15629841/
