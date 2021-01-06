@@ -30,6 +30,57 @@ $(document).ready(function () {
 			$.ajax(settings).done(function (response) {
 				console.log(response);
 
+				// Showing image to html  according to zodiac sign.
+				if (sign === "cancer") {
+					$("#image")
+						.attr("src", "./assets/Signs/Cancer.jpg")
+						.css("width", "100px");
+				} else if (sign === "aquarius") {
+					$("#image")
+						.attr("src", "./assets/Signs/Aquarius.jpg")
+						.css("width", "100px");
+				} else if (sign === "aries") {
+					$("#image")
+						.attr("src", "./assets/Signs/Aries.jpg")
+						.css("width", "100px");
+				} else if (sign === "capricorn") {
+					$("#image")
+						.attr("src", "./assets/Signs/Capricorn.jpg")
+						.css("width", "100px");
+				} else if (sign === "gemini") {
+					$("#image")
+						.attr("src", "./assets/Signs/Gemini.jpg")
+						.css("width", "100px");
+				} else if (sign === "leo") {
+					$("#image")
+						.attr("src", "./assets/Signs/Leo.jpg")
+						.css("width", "100px");
+				} else if (sign === "libra") {
+					$("#image")
+						.attr("src", "./assets/Signs/Libra.jpg")
+						.css("width", "100px");
+				} else if (sign === "pisces") {
+					$("#image")
+						.attr("src", "./assets/Signs/Pisces.jpg")
+						.css("width", "100px");
+				} else if (sign === "sagittarius") {
+					$("#image")
+						.attr("src", "./assets/Signs/Sagittarius.jpg")
+						.css("width", "100px");
+				} else if (sign === "scorpio") {
+					$("#image")
+						.attr("src", "./assets/Signs/Scorpio.jpg")
+						.css("width", "100px");
+				} else if (sign === "taurus") {
+					$("#image")
+						.attr("src", "./assets/Signs/Taurus.jpg")
+						.css("width", "100px");
+				} else if (sign === "Virgo") {
+					$("#image")
+						.attr("src", "./assets/Signs/virgo.jpg")
+						.css("width", "100px");
+				}
+
 				//Inputing the api call and zodiac sign to html
 
 				document.querySelector(".main").innerHTML = `
@@ -41,7 +92,7 @@ $(document).ready(function () {
 	    <p><strong>Todays Reading:</strong> ${response.description}</p>
 	    <p><strong>Compatibility: </strong> ${response.compatibility}</p>
 	    <p><strong>Lucky Number: </strong>${response.lucky_number}</p>
-        <p><strong>Lucky Time: </strong>${response.lucky_time}</p>`;
+		<p><strong>Lucky Time: </strong>${response.lucky_time}</p>`;
 
 				// Setting Local Storage
 				localStorage.setItem(
