@@ -33,10 +33,11 @@
 
   <div id= "horoscopeDiv" class="row">
     <div class="col s12 m5">
-      <div class="card-panel">
+      <h3 id="horoscopeTitle">Horoscopes</h3>
+      <div id= "horoscopeBox" class="card-panel">
         <span class="white-text">
-          <input type="text" id="month" placeholder="Birth Month" />
-          <input type="text" id="day" placeholder="Birth Day" />
+          <input type="text" id="month" placeholder="Birth Month (MM)" />
+          <input type="text" id="day" placeholder="Birth Day (DD)" />
           <!-- <button id="submit">Submit</button>
           <input type="text" id="date" placeholder= "DATE (YYYY-MM-DD)" /> -->
           <button type= "submit" id= "submitDate" class="btn">Submit</button>
@@ -45,7 +46,7 @@
         </span>
       </div>
     </div>
-    <div class="col s12 m5">
+    <div id= "listOfInfo" class="col s12 m5">
       <div class="main"></div>
       <p ><img id="image" src="" alt="" ></p>
       <p id="sign"></p>
