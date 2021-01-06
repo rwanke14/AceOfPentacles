@@ -12,19 +12,144 @@ $(document).ready(function () {
 		},
 	};
 
-	// $.ajax(settings).done(function (response) {
-	// 	console.log(response);
-	// });
-
 	$.getJSON(
 		"https://rws-cards-api.herokuapp.com/api/v1/cards",
 		function (data) {
 			console.log(data);
-			console.log(data.cards[20].name);
 			cardData = data;
-		}
+		};
 	);
 
+	$('#card1').click(function (e) { 
+		e.preventDefault();
+		writeCard1();
+	});
+
+	$('#card2').click(function (e) {
+		e.preventDefault();
+		writeCard2();
+	});
+
+	$('#card3').click(function (e) {
+		e.preventDefault();
+		writeCard3();
+	});
+
+	$('#card4').click(function (e) {
+		e.preventDefault();
+		writeCard4();
+	});
+
+	$('#card5').click(function (e) {
+		e.preventDefault();
+		writeCard5();
+	});
+
+	$('#card6').click(function (e) {
+		e.preventDefault();
+		writeCard6();
+	});
+
+	$('#card7').click(function (e) {
+		e.preventDefault();
+		writeCard7();
+	});
+
+	$('#card8').click(function (e) {
+		e.preventDefault();
+		writeCard8();
+	});
+
+	$('#card9').click(function (e) {
+		e.preventDefault();
+		writeCard9();
+	});
+
+	$('#card10').click(function (e) {
+		e.preventDefault();
+		writeCard10();
+	});
+
+	// Redisplay card data when user clicks card image after card reveal
+	function writeCard1(data) {
+		var card1 = localStorage.getItem('card1');
+		var meaning1 = localStorage.getItem('meaning1');
+		$(".celticTitle").text("Card 1: " + card1);
+		$(".celticPos").text("The Situation");
+		$('.celticRead').text('Meaning: ' + meaning1);
+	};
+
+	function writeCard2(data) {
+		var card2 = localStorage.getItem('card2');
+		var meaning2 = localStorage.getItem('meaning2');
+		$(".celticTitle").text("Card 2: " + card2);
+		$(".celticPos").text("The Challenge");
+		$('.celticRead').text('Meaning: ' + meaning2);
+	};
+
+	function writeCard3(data) {
+		var card3 = localStorage.getItem('card3');
+		var meaning3 = localStorage.getItem('meaning3');
+		$(".celticTitle").text("Card 3: " + card3);
+		$(".celticPos").text("The Root");
+		$('.celticRead').text('Meaning: ' + meaning3);
+	};
+
+	function writeCard4(data) {
+		var card4 = localStorage.getItem('card4');
+		var meaning4 = localStorage.getItem('meaning4');
+		$(".celticTitle").text("Card 4: " + card4);
+		$(".celticPos").text("The Past");
+		$('.celticRead').text('Meaning: ' + meaning4);
+	};
+
+	function writeCard5(data) {
+		var card5 = localStorage.getItem('card5');
+		var meaning5 = localStorage.getItem('meaning5');
+		$(".celticTitle").text("Card 5: " + card5);
+		$(".celticPos").text("The Possibilities");
+		$('.celticRead').text('Meaning: ' + meaning5);
+	};
+
+	function writeCard6(data) {
+		var card6 = localStorage.getItem('card6');
+		var meaning6 = localStorage.getItem('meaning6');
+		$(".celticTitle").text("Card 6: " + card6);
+		$(".celticPos").text("The Near Future");
+		$('.celticRead').text('Meaning: ' + meaning6);
+	};
+
+	function writeCard7(data) {
+		var card7 = localStorage.getItem('card7');
+		var meaning7 = localStorage.getItem('meaning7');
+		$(".celticTitle").text("Card 7: " + card7);
+		$(".celticPos").text("The Self");
+		$('.celticRead').text('Meaning: ' + meaning7);
+	};
+
+	function writeCard8(data) {
+		var card8 = localStorage.getItem('card8');
+		var meaning8 = localStorage.getItem('meaning8');
+		$(".celticTitle").text("Card 8: " + card8);
+		$(".celticPos").text("The Others");
+		$('.celticRead').text('Meaning: ' + meaning8);
+	};
+
+	function writeCard9(data) {
+		var card9 = localStorage.getItem('card9');
+		var meaning9 = localStorage.getItem('meaning9');
+		$(".celticTitle").text("Card 9: " + card9);
+		$(".celticPos").text("The Attitude");
+		$('.celticRead').text('Meaning: ' + meaning9);
+	};
+
+	function writeCard10(data) {
+		var card10 = localStorage.getItem('card10');
+		var meaning10 = localStorage.getItem('meaning10');
+		$(".celticTitle").text("Card 10: " + card10);
+		$(".celticPos").text("The Outcome");
+		$('.celticRead').text('Meaning: ' + meaning10);
+	};
 
 	var cardData;
 	showCards(cardData);
@@ -55,13 +180,18 @@ $(document).ready(function () {
 				//If/Else showing which info to call(rev vs up)
 				$(".celticRead").text(
                     "Meaning: " + cardData.cards[randomCard].meaning_rev
-                );
+				);
+				localStorage.setItem('meaning1', cardData.cards[randomCard].meaning_rev);
                 
 			} else {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
+				localStorage.setItem('meaning1', cardData.cards[randomCard].meaning_up);
 			}
+
+			localStorage.setItem('card1', cardData.cards[randomCard].name);
+			cardData.cards.splice(randomCard, 1);
 		});
 
 		//This calls Second Card
@@ -91,11 +221,15 @@ $(document).ready(function () {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
+				localStorage.setItem('meaning2', cardData.cards[randomCard].meaning_rev);
 			} else {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
+				localStorage.setItem('meaning2', cardData.cards[randomCard].meaning_up);
 			}
+			localStorage.setItem('card2', cardData.cards[randomCard].name);
+			cardData.cards.splice(randomCard, 1);
 		});
 
 		//This calls for Third Card
@@ -125,11 +259,15 @@ $(document).ready(function () {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
+				localStorage.setItem('meaning3', cardData.cards[randomCard].meaning_rev);
 			} else {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
-			}
+				localStorage.setItem('meaning3', cardData.cards[randomCard].meaning_up);
+			};
+			localStorage.setItem('card3', cardData.cards[randomCard].name);
+			cardData.cards.splice(randomCard, 1);
 		});
 
 		//This calls for Fourth Card
@@ -159,11 +297,15 @@ $(document).ready(function () {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
+				localStorage.setItem('meaning4', cardData.cards[randomCard].meaning_rev);
 			} else {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
+				localStorage.setItem('meaning4', cardData.cards[randomCard].meaning_up);
 			}
+			localStorage.setItem('card4', cardData.cards[randomCard].name);
+			cardData.cards.splice(randomCard, 1);
 		});
 
 		//This calls for Fifth Card
@@ -193,11 +335,15 @@ $(document).ready(function () {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
+				localStorage.setItem('meaning5', cardData.cards[randomCard].meaning_rev);
 			} else {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
-			}
+				localStorage.setItem('meaning5', cardData.cards[randomCard].meaning_up);
+			};
+			localStorage.setItem('card5', cardData.cards[randomCard].name);
+			cardData.cards.splice(randomCard, 1);
 		});
 
 		//This calls for Sixth Card
@@ -227,11 +373,15 @@ $(document).ready(function () {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
+				localStorage.setItem('meaning6', cardData.cards[randomCard].meaning_rev);
 			} else {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
+				localStorage.setItem('meaning6', cardData.cards[randomCard].meaning_up);
 			}
+			localStorage.setItem('card6', cardData.cards[randomCard].name);
+			cardData.cards.splice(randomCard, 1);
 		});
 
 		//This calls for 7th Card
@@ -261,11 +411,15 @@ $(document).ready(function () {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
+				localStorage.setItem('meaning7', cardData.cards[randomCard].meaning_rev);
 			} else {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
-			}
+				localStorage.setItem('meaning7', cardData.cards[randomCard].meaning_up);
+			};
+			localStorage.setItem('card7', cardData.cards[randomCard].name);
+			cardData.cards.splice(randomCard, 1);
 		});
 
 		//This calls for Eigth Card
@@ -295,11 +449,15 @@ $(document).ready(function () {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
+				localStorage.setItem('meaning8', cardData.cards[randomCard].meaning_rev);
 			} else {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
-			}
+				localStorage.setItem('meaning8', cardData.cards[randomCard].meaning_up);
+			};
+			localStorage.setItem('card8', cardData.cards[randomCard].name);
+			cardData.cards.splice(randomCard, 1);
 		});
 
 		//This calls for Ninth Card
@@ -329,11 +487,15 @@ $(document).ready(function () {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
+				localStorage.setItem('meaning9', cardData.cards[randomCard].meaning_rev);
 			} else {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
-			}
+				localStorage.setItem('meaning9', cardData.cards[randomCard].meaning_up);
+			};
+			localStorage.setItem('card9', cardData.cards[randomCard].name);
+			cardData.cards.splice(randomCard, 1);
 		});
 
 		//This calls for Tenth Card
@@ -363,14 +525,15 @@ $(document).ready(function () {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
+				localStorage.setItem('meaning10', cardData.cards[randomCard].meaning_rev);
 			} else {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
-            }
-            
+				localStorage.setItem('meaning10', cardData.cards[randomCard].meaning_up);
+            };
+			localStorage.setItem('card10', cardData.cards[randomCard].name);
+			cardData.cards.splice(randomCard, 1);
 		});
-    }
-    
-
+    };
 });
