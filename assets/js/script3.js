@@ -17,6 +17,10 @@ $(document).ready(function () {
 		function (data) {
 			console.log(data);
 			cardData = data;
+			cardData.cards[41].meaning_rev =
+				"A relationship becomes less significant than originally expected." +
+				" Friends rather than lovers. Old issues may block new love. With the Hermit, High Priestess, or" +
+				" other reversed cards, a need to be on your own. --Rachel Pollack, The New Tarot Handbook";
 		});
 
 	$('#card1').click(function (e) { 
@@ -122,7 +126,7 @@ $(document).ready(function () {
 		var card7 = localStorage.getItem('card7');
 		var meaning7 = localStorage.getItem('meaning7');
 		$(".celticTitle").text("Card 7: " + card7);
-		$(".celticPos").text("The Self");
+		$(".celticPos").text("The Approach");
 		$('.celticRead').text('Meaning: ' + meaning7);
 	};
 
@@ -168,7 +172,7 @@ $(document).ready(function () {
 
 			//the following codes below are calling info to be added in text to these classes
             );$(".celticTitle").text("Card 1: " + cardData.cards[randomCard].name)
-            $(".celticPos").text('"Where you are right now"')
+            $(".celticPos").text('The Situation')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card1").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip1 = Math.random() < 0.5;
@@ -207,7 +211,7 @@ $(document).ready(function () {
 
 			//the following codes below are calling info to be added in text to these classes
             );$(".celticTitle").text("Card 2: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text('"Potential/Challenges"')
+            $(".celticPos").text('The Challenge')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card2").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip2 = Math.random() < 0.5;
@@ -245,7 +249,7 @@ $(document).ready(function () {
 
 			//the following codes below are calling info to be added in text to these classes
             );$(".celticTitle").text("Card 3: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text('"What to focus on"')
+            $(".celticPos").text('The Root')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card3").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip3 = Math.random() < 0.5;
@@ -283,7 +287,7 @@ $(document).ready(function () {
 
 			//the following codes below are calling info to be added in text to these classes
             );$(".celticTitle").text("Card 4: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text('"Your past"')
+            $(".celticPos").text('The Past')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card4").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip4 = Math.random() < 0.5;
@@ -321,7 +325,7 @@ $(document).ready(function () {
 
 			//the following codes below are calling info to be added in text to these classes
             ); $(".celticTitle").text("Card 5: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text('"Your strengths"')
+            $(".celticPos").text('The Possibilities')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card5").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip5 = Math.random() < 0.5;
@@ -359,7 +363,7 @@ $(document).ready(function () {
 
 			//the following codes below are calling info to be added in text to these classes
             );$(".celticTitle").text("Card 6: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text('"Near future"')
+            $(".celticPos").text('The Near Future')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card6").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip6 = Math.random() < 0.5;
@@ -397,7 +401,7 @@ $(document).ready(function () {
 
 			//the following codes below are calling info to be added in text to these classes
             );$(".celticTitle").text("Card 7: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text('"Suggested approach"')
+            $(".celticPos").text('The Approach')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card7").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip7 = Math.random() < 0.5;
@@ -435,7 +439,7 @@ $(document).ready(function () {
 
 			//the following codes below are calling info to be added in text to these classes
             );$(".celticTitle").text("Card 8: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text('"What you need to know"')
+            $(".celticPos").text('The Others')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card8").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip8 = Math.random() < 0.5;
@@ -473,7 +477,7 @@ $(document).ready(function () {
 
 			//the following codes below are calling info to be added in text to these classes
             );$(".celticTitle").text("Card 9: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text('"Hopes and fears"')
+            $(".celticPos").text('The Attitude')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card9").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip9 = Math.random() < 0.5;
@@ -511,7 +515,7 @@ $(document).ready(function () {
 					cardData.cards[randomCard].name_short
 			//the following codes below are calling info to be added in text to these classes
             );$(".celticTitle").text("Card 10: "+ cardData.cards[randomCard].name)
-            $(".celticPos").text('"Your potential future"')
+            $(".celticPos").text('The Outcome')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card10").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip10 = Math.random() < 0.5;
