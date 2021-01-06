@@ -173,15 +173,14 @@ body {
  
    .card-format {
      background-color: #C29F38;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-     margin-bottom: 25px;
+
    }
 
 
 
    #detailsCard {
 
-    /* width: 501.75px; */
+
     width: 70%;
     height: auto;
     margin-left: 15%;
@@ -229,8 +228,6 @@ body {
   color: white;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  /* width: 60rem;
-  height: 35rem; */
   padding: 2%;
 
 }
@@ -255,9 +252,10 @@ body {
 
 #mainform {
 
-  width:960px;
-  margin-left: 15%;
-  padding-top:20px;
+  
+  width: 80%;
+  margin-left: 5%;
+  padding-top:10%;
   float: right;
   font-family: 'Montserrat Alternates', sans-serif;
 }
@@ -270,7 +268,6 @@ body {
   font-size:14px;
   font-weight:bold;
   width:70%;
-  /* margin:20px 250px 0 35px; */
   margin: 10% 12% 0 10%;
   float: right;
   background-color: #E7BD42;
@@ -340,7 +337,6 @@ textarea {
 .active {
   color: white
 }
-
 
 
 
