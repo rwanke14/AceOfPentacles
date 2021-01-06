@@ -4,6 +4,9 @@ $(document).ready(function () {
 		// Pulling the value for the month and day when clicked
 		var day = $("#day").val();
 		var month = $("#month").val();
+		var d = new Date();
+		var today =
+			d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate();
 
 		// Calling the function and grabbing the day and month
 		var sign = getZodiacSign(day, month);
@@ -45,8 +48,49 @@ $(document).ready(function () {
 
 				// Setting Local Storage
 				localStorage.setItem("Zodiac Sign", sign);
+				localStorage.setItem("Day", day);
+				localStorage.setItem("Month", month);
+				localStorage.setItem("Todays Date", response.current_date);
+				localStorage.setItem("Todays Reading", response.description);
+				localStorage.setItem("Compatibility", response.compatibility);
+				localStorage.setItem("Lucky Number", response.lucky_number);
+				localStorage.setItem("Lucky Time", response.lucky_time);
 			});
+			// update local storage daily 
+
 		}
+	});
+
+	$(day).val(localStorage.getItem("Day"));
+	$(month).val(localStorage.getItem("Month"));
+	if (
+		localStorage.getItem("Todays Date") !== null &&
+		localStorage.getItem("Todays Reading") !== null &&
+		localStorage.getItem("Compatibility") !== null &&
+		localStorage.getItem("Lucky Number") !== null &&
+		localStorage.getItem("Lucky Time") !== null
+	) {
+		$("#todaysDate").text(
+			`Todays Date: ${localStorage.getItem("Todays Date")}`
+		);
+		$("#reading").text(
+			`Todays Date: ${localStorage.getItem("Todays Reading")}`
+		);
+		$("#compatibility").text(
+			`Todays Date: ${localStorage.getItem("Compatibility")}`
+		);
+		$("#luckyNum").text(`Todays Date: ${localStorage.getItem("Lucky Number")}`);
+		$("#luckTime").text(`Todays Date: ${localStorage.getItem("Lucky Time")}`);
+	}
+
+	$("#clear").click(function (e) {
+		e.preventDefault();
+		localStorage.removeItem("Todays Date");
+		localStorage.removeItem("Todays Reading");
+		localStorage.removeItem("Compatibility");
+		localStorage.removeItem("Lucky Number");
+		localStorage.removeItem("Lucky Time");
+		$(".main").empty();
 	});
 
 	// Used Kladov/ getZodiacSign.js on github for the function... https://gist.github.com/kladov/5080233...
