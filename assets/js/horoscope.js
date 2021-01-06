@@ -61,7 +61,7 @@ $(document).ready(function () {
 						.css("width", "100px");
 				} else if (sign === "pisces") {
 					$("#image")
-						.attr("src", "./assets/Signs/Pisces.jpg")
+						.attr("src", "./assets/Signs/Pisces.jpeg")
 						.css("width", "100px");
 				} else if (sign === "sagittarius") {
 					$("#image")
