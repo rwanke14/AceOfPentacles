@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Ace of Pentacles</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
@@ -28,10 +28,37 @@
         </div>
       </nav>
   </header>
+  <!-- <div class=container id="main">
+        <div class="carousel carousel-slider center ">
+            <div class="carousel-fixed-item center">
+              <a class="btn waves-effect white grey-text darken-text-2"></a>
+            </div> 
+            <div class="carousel-item red white-text" href="#one!">
+              <h2 class="welcomeSlide">First Panel</h2>
+              <p class="white-text welcomeText">This is your first panel</p>
+            </div>
+            <div class="carousel-item amber white-text" href="#two!">
+              <h2 class="ppfTitle">Second Panel</h2>
+              <p class="white-text ppfInfo">This is your second panel</p>
+              <button class="ppfBtn">See My Spread</button>
+            </div>
+            <div class="carousel-item green white-text" href="#three!">
+              <h2>Third Panel</h2>
+              <p class="white-text">This is your third panel</p>
+            </div>
+            <div class="carousel-item blue white-text" href="#four!">
+              <h2>Fourth Panel</h2>
+              <p class="white-text">This is your fourth panel</p>
+            </div>
+          </div>
+    </div>
+  </header> -->
 
-<!-- carousel for main page to select card spread -->
 
-  <div class= "container" id="main" style="position: sticky;">
+
+  <!-- ADD HTML TO HOLD CARD CONTAINER DIVS, MAKE HIDDEN -->
+
+  <div class= "container" id="main" style="position: sticky; margin-top:150px">
     <div class="carousel carousel-slider center">
       <!-- <div class="carousel-fixed-item center" data-ride="carousel">
         <a class="btn waves-effect darken-text-2">button</a>
@@ -57,7 +84,7 @@
       </div>
       <div class="carousel-item white-text" href="#two!" data-slide-to="1">
         <h2>Past Present Future Spread</h2>
-        <p class="white-text">This type of spread is for those seaking insigth into howa situation has progressed or
+        <p class="white-text">This type of spread is for those seaking insight into how a situation has progressed or
           regressed over time.</p>
         <p class="white-text">This spread gives you an idea of where you have been and how that effects where you are
           going in life.</p>
@@ -72,14 +99,33 @@
         <p class="white-text">The spread will deal with one issue at a time with each card dealing with each issue
           related to your situation.</p>
         <p class="white-text">Think of the question you need answered and click the button to get your reading.</p>
-        <button class='btn' onclick="location.href='celtic.html'">Get reading</button>
+        <button class="ppfBtn btn waves-effect darken-text-2">Get reading</button>
+      </div>
+      <div class="carousel-item white-text" href="#four!" data-slide-to="4">
+        <h2>Horoscope</h2>
+        <p class="white-text"> If you are just not ready to use Tarot you could also check on your Horoscope.
+        </p>
+        <p class="white-text">Horoscopes give you information on your present situation depending on your Zodiac.</p>
+        <p class="white-text">Your Zodiac sign is specific to your date of birth.</p>
+        <p class="white-text">Enter your birth day, click the button, and make magic, my friend!</p>
+        <button class='btn' onclick="location.href='horoscope.html'">Get reading</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s2" id="detailsCard">
+        <div class="card-panel" id="infoCard">
+          <span class="white-text">
+            <h1 style="font-size: x-large; text-align: center;">Past Present Future Tarot Card Reading</h1>
+           <p>Click the back of a card to get your past, present and future reading.</p> 
+          </span>
+        </div>
       </div>
     </div>
     
     <!-- Three card spread row -->
-    <div class="container" id="ppfSpread">
-    
     <div class="row ppfCards" style="visibility: hidden;">
+    
       <!-- Card 1 - Past -->
       <div class='card col s4'>
         <div class='card-image waves-effect waves-block waves-light'>
@@ -90,7 +136,7 @@
               class="material-icons right">more_vert</i></span>
         </div>
         <div class='card-reveal'>
-          <span class='card-title grey-text text-darken-4'><i class='material-icons right'>close</i></span>
+          <span class='card-title'><i class='material-icons right'>close</i></span>
           <p id="reveal0"></p>
         </div>
       </div>
@@ -125,21 +171,19 @@
     </div>
     <div class="row ppfInfo" style="visibility: hidden"></div>
   </div>
-  </div>
 
   <footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="navColor">Ace of Pentacles</h5>
-          <p class="grey-text text-lighten-4">Make magic, my friend!</p>
+          <h5 class="navColor">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="navColor">Links</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" href="aboutTarot.html">About Tarot</a></li>
             <li><a class="grey-text text-lighten-3" href="contact.html">Contact Us</a></li>
-            <li><a class="grey-text text-lighten-3" href="celtic.html">Celtic Cross Spread</a></li>
             <li><a class="grey-text text-lighten-3" href="horoscope.html">Horoscopes</a></li>
           </ul>
         </div>
@@ -148,7 +192,7 @@
     <div class="footer-copyright">
       <div class="container">
         © 2020 Copyright Ace of Pentacles
-        <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+       
       </div>
     </div>
   </footer>
