@@ -52,17 +52,19 @@ Contact Page:
 
 Contact form if user wishes to contact the developers. 
 
+![Data Flow Chart](./assets/screenshots/AceofPentacles.png)
+
 [Contributors]
 
 Rachel Wanke - CSS/HTML/Project Management
 
 Frankie Rosado - CSS/HTML/Design
 
-Amir Ashtiany- Javascript/Local Storage/API
+Amir Ashtiany- Javascript/Local Storage/API/Horoscope Page
 
-Johnnie Simpson- Javascript/API/
+Johnnie Simpson- Javascript/API/Card Spreads
 
-Young Ji Kim- Linter/Javascript
+Young Ji Kim- Linter/Javascript/API/Celtic Cross Spread & CSS
 
 [Developers Contact]
 
@@ -70,6 +72,7 @@ Young Ji Kim- Linter/Javascript
 2. Young Ji Kim - https://github.com/youjmi
 3. Frankie Rosado - https://github.com/Franciscorosado09
 4. Rachel Wanke: - https://github.com/rwanke14 
+5. Johnnie Simpson
 
 [Acknowledgments]
 
