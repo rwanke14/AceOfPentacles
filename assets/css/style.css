@@ -196,10 +196,12 @@ body {
 
 }
 
-@media only screen and (max-device-width: 800px) {
-  nav .brand-logo{
+@media only screen and (max-device-width: 700px) {
+  #navbarAce {
     
-    font-size: 170%;
+    
+    font-size: 126%;
+    
   }
 
 }
