@@ -26,14 +26,14 @@ body {
   nav .brand-logo {
     color: #DDE1E9;
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: xx-large;
+    font-size: 250%;
     padding-left: 2%;
   }
 
   /* setting main content styles*/
   main {
     flex: 1 0 auto;
-    margin-top: 150px;
+    margin-top: 170px;
   }
 
 
@@ -46,17 +46,8 @@ body {
 
   }
 
-    #horoscopeDiv {
-    margin-top: 30%;
-    background-color: #C29F38;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    width: 60em;
-    height: 34rem;
-    padding: 2%;
     
-  }
+  
 
   .carousel-item {
     background-color: #C29F38;
@@ -202,6 +193,15 @@ body {
 
 }
 
+@media only screen and (max-device-width: 800px) {
+  nav .brand-logo{
+    
+    font-size: 170%;
+  }
+
+}
+
+
 /* About Tarot CSS */
 
 #aboutTarot{
@@ -320,4 +320,85 @@ textarea {
 
  text-align: right;
 
+}
+
+
+/* Horoscope Page */
+
+#horoscopeDiv {
+  margin-top: 30%;
+  background-color: #C29F38;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  width: 60em;
+  height: 34rem;
+  padding: 2%;
+}
+
+#horoscopeTitle{
+  font-size: 300%;
+  margin-top: 10%;
+
+
+}
+
+#horoscopeBox {
+
+  margin-top: 20%;
+  width: 80%;
+  margin-left: 10%;
+
+
+
+}
+
+#clear{
+  margin-top: 5%;
+}
+
+#listOfInfo {
+
+  margin-left: 10%;
+  margin-bottom: 10%;
+
+}
+
+
+@media only screen and (max-device-width: 800px) {
+  #horoscopeDiv {
+    margin-top: 30%;
+    background-color: #C29F38;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    width: 40rem;
+    height: 20rem;
+    padding: 2%;
+  }
+  
+  #horoscopeTitle{
+    font-size: 150%;
+    margin-top: 10%;
+  
+  
+  }
+  
+  /* #horoscopeBox {
+  
+    
+   
+  
+  
+  
+  }
+  
+  #clear{
+   
+  }
+  
+  #listOfInfo {
+  
+     */
+  }
 }

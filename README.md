@@ -80,3 +80,8 @@ Thanks to Sameer Kumar for the Horoscope API. Visit their RapidAPI profile at: h
 Thanks to Boris Kladov for providing the base getZodiacSign() function, which was modified for our purposes. Visit his Github profile at: https://gist.github.com/kladov 
 
 Thanks to Lena Helfinger for providing images for Horoscopes.  https://pixabay.com/users/lenahelfinger-15629841/
+
+Thank to Formget and medium for basics of Contact US form : https://www.formget.com/jquery-contact-form/  and https://medium.com/getform-all-about/how-to-create-an-html-form-that-sends-you-an-email-c89068ffa76e
+
+Materialize for CSS https://materializecss.com/
+
