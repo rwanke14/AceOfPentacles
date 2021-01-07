@@ -193,10 +193,13 @@ body {
 
 }
 
-@media only screen and (max-device-width: 800px) {
-  nav .brand-logo{
+@media only screen and (max-device-width: 700px) {
+  nav{
     
-    font-size: 170%;
+    width: 75%;
+    height: auto;
+    font-size: 75%;
+    
   }
 
 }
