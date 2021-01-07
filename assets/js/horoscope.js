@@ -138,13 +138,18 @@ $(document).ready(function () {
 	}
 
 	$("#clear").click(function (e) {
+		// clears the input fields and text fields and reloads page.
 		e.preventDefault();
 		localStorage.removeItem("Todays Date");
 		localStorage.removeItem("Todays Reading");
 		localStorage.removeItem("Compatibility");
 		localStorage.removeItem("Lucky Number");
 		localStorage.removeItem("Lucky Time");
+		localStorage.removeItem("Day");
+		localStorage.removeItem("Month");
 		$(".main").empty();
+		$("#month").empty();
+		$("#day").empty();
 		location.reload();
 	});
 
@@ -198,6 +203,4 @@ $(document).ready(function () {
 			return zodiacSigns.sag;
 		}
 	}
-
-	$(".modal").modal();
 });
