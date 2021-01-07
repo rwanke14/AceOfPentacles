@@ -1,3 +1,5 @@
+/* Main web content format. */
+
 body {
     display: flex;
     min-height: 100vh;
@@ -26,7 +28,7 @@ body {
   nav .brand-logo {
     color: #DDE1E9;
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 250%;
+    font-size: 3vw;
     padding-left: 2%;
   }
 
@@ -43,6 +45,7 @@ body {
     background-color: #E7BD42;
     position: absolute;
     margin-left: 5%;
+    margin-top: 20%;
 
   }
 
@@ -364,6 +367,7 @@ textarea {
 
 }
 
+/* Media Querys for horoscope page and nav bar title. */
 
 @media only screen and (max-device-width: 800px) {
   #horoscopeDiv {
@@ -373,7 +377,7 @@ textarea {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     width: 40rem;
-    height: 20rem;
+    height: 22rem;
     padding: 2%;
   }
   
@@ -384,21 +388,57 @@ textarea {
   
   }
   
-  /* #horoscopeBox {
-  
+   #horoscopeBox {
     
-   
-  
-  
-  
+    padding: 20px;
+    margin-top: 20px;
+    height: 15rem;
+    width: 17rem;
+    margin-left: 0px;
+
   }
-  
-  #clear{
-   
+
+  #submitDate, #clear {
+    font-size: 10px;
   }
-  
+
   #listOfInfo {
-  
-     */
+    font-size: 10px;
+ 
   }
+  
+  #horoscopeInfo {
+    width: 13rem;
+    
+  }
+
+
+  #image {
+    visibility: hidden;
+  }
+
 }
+
+@media only screen and (max-device-width: 641px) {
+
+  #horoscopeDiv {
+    width: 21rem;
+    height: 41rem;
+  }
+
+  #horoscopeBox {
+    height: 15rem;
+  }
+
+  a.brand-logo {
+    font-size: 20px;
+  }
+
+  #inputBoxCol {
+    padding-left: 1.5rem;
+  }
+
+  #listOfInfo {
+    font-size: 10px;
+  }
+} 

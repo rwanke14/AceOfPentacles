@@ -6,6 +6,8 @@
   <!-- Set viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Horoscope</title>
+  <!-- Set Favicon -->
+  <link rel="shortcut icon" href="./assets/css-images/favicon.ico" type="image/x-icon">
   <!-- Import Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Import fonts -->
@@ -13,12 +15,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Montserrat:wght@300;400&display=swap"
     rel="stylesheet">
-    <!-- Import local CSS -->
+  <!-- Import local CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
 <!-- Navbar -->
+
 <body>
   <header>
     <div class="navbar-fixed" id="navbar">
@@ -34,36 +37,36 @@
   </header>
 
   <!-- Horoscope input field -->
-  <div id= "horoscopeDiv" class="row">
-    <div class="col s12 m5">
+  <div id="horoscopeDiv" class="row">
+    <div class="col s12 m5" id="inputBoxCol">
       <h3 id="horoscopeTitle">Horoscopes</h3>
-      <div id= "horoscopeBox" class="card-panel">
+      <div id="horoscopeBox" class="card-panel">
         <span class="white-text">
           <input type="text" id="month" placeholder="Birth Month (MM)" />
           <input type="text" id="day" placeholder="Birth Day (DD)" />
           <!-- <button id="submit">Submit</button>
           <input type="text" id="date" placeholder= "DATE (YYYY-MM-DD)" /> -->
-          <button type= "submit" id= "submitDate" class="btn">Submit</button>
-          <button type= "submit" id= "clear" class="btn">Clear Readings</button>
+          <button type="submit" id="submitDate" class="btn">Submit</button>
+          <button type="submit" id="clear" class="btn">Clear Readings</button>
         </span>
       </div>
     </div>
-    <div id= "listOfInfo" class="col s12 m5">
+    <div id="listOfInfo" class="col s12 m5">
       <div class="main"></div>
-      <p ><img id="image" src="" alt="" ></p>
-      <div class="main">
+      <p><img id="image" src="" alt=""></p>
+      <div class="main" id="horoscopeInfo">
         <p id="sign"></p>
         <p id="todaysDate"></p>
-       <p id="reading"></p>
+        <p id="reading"></p>
         <p id="compatibility"></p>
         <p id="luckyNum"></p>
         <p id="luckTime"></p>
-     </div>
+      </div>
     </div>
   </div>
-          
+
   <!-- Footer -->
-  <footer class="page-footer" id = "contact-footer">
+  <footer class="page-footer" id="contact-footer">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -84,19 +87,18 @@
     <div class="footer-copyright">
       <div class="container">
         © 2020 Copyright Ace of Pentacles
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
       </div>
     </div>
   </footer>
 
   <!-- Script for Contact Us AJAX -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  
-<!-- Materialize scripts -->
+
+  <!-- Materialize scripts -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
   <script src="./assets/js/horoscope.js"></script>
 
