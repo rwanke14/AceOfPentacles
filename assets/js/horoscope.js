@@ -82,30 +82,29 @@ $(document).ready(function () {
 				}
 
 				//Inputing the api call and zodiac sign to html
-
-				document.querySelector(".main").innerHTML = `
+				if (!$(".main").val() === "") {
+					document.querySelector(".main").innerHTML = `
         
-        <p><strong>Sign:</strong> ${
-					sign.charAt(0).toUpperCase() + sign.slice(1)
-				}</p>
-				<p><strong>Todays Date:</strong> ${response.current_date}</p>
-	    <p><strong>Todays Reading:</strong> ${response.description}</p>
-	    <p><strong>Compatibility: </strong> ${response.compatibility}</p>
-	    <p><strong>Lucky Number: </strong>${response.lucky_number}</p>
-		<p><strong>Lucky Time: </strong>${response.lucky_time}</p>`;
+					<p><strong>Sign:</strong> ${sign.charAt(0).toUpperCase() + sign.slice(1)}</p>
+							<p><strong>Todays Date:</strong> ${response.current_date}</p>
+					<p><strong>Todays Reading:</strong> ${response.description}</p>
+					<p><strong>Compatibility: </strong> ${response.compatibility}</p>
+					<p><strong>Lucky Number: </strong>${response.lucky_number}</p>
+					<p><strong>Lucky Time: </strong>${response.lucky_time}</p>`;
 
-				// Setting Local Storage
-				localStorage.setItem(
-					"Zodiac Sign",
-					sign.charAt(0).toUpperCase() + sign.slice(1)
-				);
-				localStorage.setItem("Day", day);
-				localStorage.setItem("Month", month);
-				localStorage.setItem("Todays Date", response.current_date);
-				localStorage.setItem("Todays Reading", response.description);
-				localStorage.setItem("Compatibility", response.compatibility);
-				localStorage.setItem("Lucky Number", response.lucky_number);
-				localStorage.setItem("Lucky Time", response.lucky_time);
+					// Setting Local Storage
+					localStorage.setItem(
+						"Zodiac Sign",
+						sign.charAt(0).toUpperCase() + sign.slice(1)
+					);
+					localStorage.setItem("Day", day);
+					localStorage.setItem("Month", month);
+					localStorage.setItem("Todays Date", response.current_date);
+					localStorage.setItem("Todays Reading", response.description);
+					localStorage.setItem("Compatibility", response.compatibility);
+					localStorage.setItem("Lucky Number", response.lucky_number);
+					localStorage.setItem("Lucky Time", response.lucky_time);
+				}
 			});
 			// update local storage daily
 		}
