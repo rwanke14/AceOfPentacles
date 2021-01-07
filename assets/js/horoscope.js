@@ -29,57 +29,7 @@ $(document).ready(function () {
 			};
 			$.ajax(settings).done(function (response) {
 				console.log(response);
-
-				// Showing image to html  according to zodiac sign.
-				if (sign === "cancer") {
-					$("#image")
-						.attr("src", "./assets/Signs/Cancer.jpg")
-						.css("width", "100px");
-				} else if (sign === "aquarius") {
-					$("#image")
-						.attr("src", "./assets/Signs/Aquarius.jpg")
-						.css("width", "100px");
-				} else if (sign === "aries") {
-					$("#image")
-						.attr("src", "./assets/Signs/Aries.jpg")
-						.css("width", "100px");
-				} else if (sign === "capricorn") {
-					$("#image")
-						.attr("src", "./assets/Signs/Capricorn.jpg")
-						.css("width", "100px");
-				} else if (sign === "gemini") {
-					$("#image")
-						.attr("src", "./assets/Signs/Gemini.jpg")
-						.css("width", "100px");
-				} else if (sign === "leo") {
-					$("#image")
-						.attr("src", "./assets/Signs/Leo.jpg")
-						.css("width", "100px");
-				} else if (sign === "libra") {
-					$("#image")
-						.attr("src", "./assets/Signs/Libra.jpg")
-						.css("width", "100px");
-				} else if (sign === "pisces") {
-					$("#image")
-						.attr("src", "./assets/Signs/Pisces.jpeg")
-						.css("width", "100px");
-				} else if (sign === "sagittarius") {
-					$("#image")
-						.attr("src", "./assets/Signs/Sagittarius.jpg")
-						.css("width", "100px");
-				} else if (sign === "scorpio") {
-					$("#image")
-						.attr("src", "./assets/Signs/Scorpio.jpg")
-						.css("width", "100px");
-				} else if (sign === "taurus") {
-					$("#image")
-						.attr("src", "./assets/Signs/Taurus.jpg")
-						.css("width", "100px");
-				} else if (sign === "Virgo") {
-					$("#image")
-						.attr("src", "./assets/Signs/virgo.jpg")
-						.css("width", "100px");
-				}
+				getPic(sign);
 
 				//Inputing the api call and zodiac sign to html
 
@@ -138,6 +88,7 @@ $(document).ready(function () {
 	$("#clear").click(function (e) {
 		// clears the input fields and text fields and reloads page.
 		e.preventDefault();
+		localStorage.removeItem("Zodiac Sign");
 		localStorage.removeItem("Todays Date");
 		localStorage.removeItem("Todays Reading");
 		localStorage.removeItem("Compatibility");
@@ -149,6 +100,14 @@ $(document).ready(function () {
 		$("#month").empty();
 		$("#day").empty();
 		location.reload();
+	});
+
+	$(document).ready(function () {
+		var zodiacSign = localStorage.getItem("Zodiac Sign");
+
+		if (zodiacSign) {
+			getPic(zodiacSign);
+		}
 	});
 
 	// Used Kladov/ getZodiacSign.js on github for the function... https://gist.github.com/kladov/5080233...
@@ -200,5 +159,12 @@ $(document).ready(function () {
 		} else if ((month == 11 && day >= 23) || (month == 12 && day <= 21)) {
 			return zodiacSigns.sag;
 		}
+	}
+
+	function getPic(sign) {
+		var sign = sign.charAt(0).toUpperCase() + sign.slice(1);
+
+		// Showing image to html  according to zodiac sign.
+		$("#imageHoroscope").attr("src", `./assets/Signs/${sign}.jpg`);
 	}
 });
