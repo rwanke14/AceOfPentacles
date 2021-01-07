@@ -1,17 +1,8 @@
 //Celtic Cross Spread//
 
 $(document).ready(function () {
-	const settings = {
-		async: true,
-		crossDomain: true,
-		// "url": "https://astrology-horoscope.p.rapidapi.com/zodiac_finder/details_requirements/",
-		method: "GET",
-		headers: {
-			"x-rapidapi-key": "87b6f48f43mshd9aaace1d8eeaefp1a1912jsn1259fae457e2",
-			"x-rapidapi-host": "astrology-horoscope.p.rapidapi.com",
-		},
-	};
 
+	// Call tarot card API 
 	$.getJSON(
 		"https://rws-cards-api.herokuapp.com/api/v1/cards",
 		function (data) {
@@ -23,6 +14,7 @@ $(document).ready(function () {
 				" other reversed cards, a need to be on your own. --Rachel Pollack, The New Tarot Handbook";
 		});
 
+	// Listen for repeat clicks on image IDs to trigger card data functions
 	$('#card1').click(function (e) { 
 		e.preventDefault();
 		writeCard1();
@@ -158,23 +150,22 @@ $(document).ready(function () {
 	showCards(cardData);
 	function showCards(data) {
 
-        //This calls for the First Card
+        // Call First Card
 		$("#card1").one("click", function (e) {
+			// Reset card flip class
 			if ($("#card1").hasClass("flip")) {
 				$("#card1").removeClass("flip");
 			}
 			$("#card1").attr("class", "activator");
+			// Randomly generate a card
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-
-			//the following codes below are calling info to be added in text to these classes
-            );$(".celticTitle").text("Card 1: " + cardData.cards[randomCard].name)
-            $(".celticPos").text('The Situation')
+			$(".celticTitle").text("Card 1: " + cardData.cards[randomCard].name);
+			// Define card placement in Celtic Cross
+            $(".celticPos").text('The Situation');
 			cardImage = cardData.cards[randomCard].name_short;
+			// Swap image sources
 			$("#card1").attr("src", "./assets/card-images/" + cardImage + ".png");
+			// Randomly determine if card is flipped or not
 			var flip1 = Math.random() < 0.5;
 			if (flip1 === true) {
 				$("#card1").addClass("flip");
@@ -184,33 +175,30 @@ $(document).ready(function () {
 				$(".celticRead").text(
                     "Meaning: " + cardData.cards[randomCard].meaning_rev
 				);
+				// Set card meaning to local storage to be recalled when user clicks on card image again
 				localStorage.setItem('meaning1', cardData.cards[randomCard].meaning_rev);
                 
 			} else {
 				$(".celticRead").text(
 					"Meaning: " + cardData.cards[randomCard].meaning_up
 				);
+				// Set card meaning to local storage to be recalled when user clicks on card image again
 				localStorage.setItem('meaning1', cardData.cards[randomCard].meaning_up);
 			}
-
+			// Set card name to local storage to be recalled when user clicks on card image again
 			localStorage.setItem('card1', cardData.cards[randomCard].name);
+			// Remove card object from API array to prevent card duplication in one spread
 			cardData.cards.splice(randomCard, 1);
 		});
 
-		//This calls Second Card
+		// Call Second Card
 		$("#card2").one("click", function () {
 			if ($("#card2").hasClass("flip")) {
 				$("#card2").removeClass("flip");
 			}
 			$("#card2").attr("class", "activator");
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-
-			//the following codes below are calling info to be added in text to these classes
-            );$(".celticTitle").text("Card 2: "+ cardData.cards[randomCard].name)
+			$(".celticTitle").text("Card 2: "+ cardData.cards[randomCard].name)
             $(".celticPos").text('The Challenge')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card2").attr("src", "./assets/card-images/" + cardImage + ".png");
@@ -235,20 +223,14 @@ $(document).ready(function () {
 			cardData.cards.splice(randomCard, 1);
 		});
 
-		//This calls for Third Card
+		// Call Third Card
 		$("#card3").one("click", function () {
 			if ($("#card3").hasClass("flip")) {
 				$("#card3").removeClass("flip");
 			}
 			$("#card3").attr("class", "activator");
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-
-			//the following codes below are calling info to be added in text to these classes
-            );$(".celticTitle").text("Card 3: "+ cardData.cards[randomCard].name)
+			$(".celticTitle").text("Card 3: "+ cardData.cards[randomCard].name)
             $(".celticPos").text('The Root')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card3").attr("src", "./assets/card-images/" + cardImage + ".png");
@@ -273,20 +255,14 @@ $(document).ready(function () {
 			cardData.cards.splice(randomCard, 1);
 		});
 
-		//This calls for Fourth Card
+		// Call Fourth Card
 		$("#card4").one("click", function () {
 			if ($("#card4").hasClass("flip")) {
 				$("#card4").removeClass("flip");
 			}
 			$("#card4").attr("class", "activator");
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-
-			//the following codes below are calling info to be added in text to these classes
-            );$(".celticTitle").text("Card 4: "+ cardData.cards[randomCard].name)
+			$(".celticTitle").text("Card 4: "+ cardData.cards[randomCard].name)
             $(".celticPos").text('The Past')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card4").attr("src", "./assets/card-images/" + cardImage + ".png");
@@ -311,20 +287,14 @@ $(document).ready(function () {
 			cardData.cards.splice(randomCard, 1);
 		});
 
-		//This calls for Fifth Card
+		// Call Fifth Card
 		$("#card5").one("click", function () {
 			if ($("#card5").hasClass("flip")) {
 				$("#card5").removeClass("flip");
 			}
 			$("#card5").attr("class", "activator");
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-
-			//the following codes below are calling info to be added in text to these classes
-            ); $(".celticTitle").text("Card 5: "+ cardData.cards[randomCard].name)
+			$(".celticTitle").text("Card 5: "+ cardData.cards[randomCard].name)
             $(".celticPos").text('The Possibilities')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card5").attr("src", "./assets/card-images/" + cardImage + ".png");
@@ -349,20 +319,14 @@ $(document).ready(function () {
 			cardData.cards.splice(randomCard, 1);
 		});
 
-		//This calls for Sixth Card
+		// Call Sixth Card
 		$("#card6").one("click", function () {
 			if ($("#card6").hasClass("flip")) {
 				$("#card6").removeClass("flip");
 			}
 			$("#card6").attr("class", "activator");
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-
-			//the following codes below are calling info to be added in text to these classes
-            );$(".celticTitle").text("Card 6: "+ cardData.cards[randomCard].name)
+			$(".celticTitle").text("Card 6: "+ cardData.cards[randomCard].name)
             $(".celticPos").text('The Near Future')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card6").attr("src", "./assets/card-images/" + cardImage + ".png");
@@ -387,20 +351,14 @@ $(document).ready(function () {
 			cardData.cards.splice(randomCard, 1);
 		});
 
-		//This calls for 7th Card
+		// Call  7th Card
 		$("#card7").one("click", function () {
 			if ($("#card7").hasClass("flip")) {
 				$("#card7").removeClass("flip");
 			}
 			$("#card7").attr("class", "activator");
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-
-			//the following codes below are calling info to be added in text to these classes
-            );$(".celticTitle").text("Card 7: "+ cardData.cards[randomCard].name)
+			$(".celticTitle").text("Card 7: "+ cardData.cards[randomCard].name)
             $(".celticPos").text('The Approach')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card7").attr("src", "./assets/card-images/" + cardImage + ".png");
@@ -425,20 +383,14 @@ $(document).ready(function () {
 			cardData.cards.splice(randomCard, 1);
 		});
 
-		//This calls for Eigth Card
+		// Call Eighth Card
 		$("#card8").one("click", function () {
 			if ($("#card8").hasClass("flip")) {
 				$("#card8").removeClass("flip");
 			}
 			$("#card8").attr("class", "activator");
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-
-			//the following codes below are calling info to be added in text to these classes
-            );$(".celticTitle").text("Card 8: "+ cardData.cards[randomCard].name)
+			$(".celticTitle").text("Card 8: "+ cardData.cards[randomCard].name)
             $(".celticPos").text('The Others')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card8").attr("src", "./assets/card-images/" + cardImage + ".png");
@@ -463,20 +415,14 @@ $(document).ready(function () {
 			cardData.cards.splice(randomCard, 1);
 		});
 
-		//This calls for Ninth Card
+		// Call Ninth Card
 		$("#card9").one("click", function () {
 			if ($("#card9").hasClass("flip")) {
 				$("#card9").removeClass("flip");
 			}
 			$("#card9").attr("class", "activator");
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-
-			//the following codes below are calling info to be added in text to these classes
-            );$(".celticTitle").text("Card 9: "+ cardData.cards[randomCard].name)
+			$(".celticTitle").text("Card 9: "+ cardData.cards[randomCard].name)
             $(".celticPos").text('The Attitude')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card9").attr("src", "./assets/card-images/" + cardImage + ".png");
@@ -501,7 +447,7 @@ $(document).ready(function () {
 			cardData.cards.splice(randomCard, 1);
 		});
 
-		//This calls for Tenth Card
+		// Call Tenth Card
         $("#card10").one("click", function () 
         {
 			if ($("#card10").hasClass("flip")) {
@@ -509,12 +455,7 @@ $(document).ready(function () {
 			}
 			$("#card10").attr("class", "activator");
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-			//the following codes below are calling info to be added in text to these classes
-            );$(".celticTitle").text("Card 10: "+ cardData.cards[randomCard].name)
+			$(".celticTitle").text("Card 10: "+ cardData.cards[randomCard].name)
             $(".celticPos").text('The Outcome')
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#card10").attr("src", "./assets/card-images/" + cardImage + ".png");

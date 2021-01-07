@@ -3,18 +3,24 @@
 
 <head>
   <meta charset="UTF-8">
+  <!-- Set viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ace of Pentacles</title>
+  <!-- Import Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Import Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Montserrat:wght@300;400&display=swap"
     rel="stylesheet">
+    <!-- Import local CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Import Materialize icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
+<!-- Navbar -->
 <body>
   <header>
     <div class="navbar-fixed" id="navbar">
@@ -29,10 +35,7 @@
       </nav>
   </header>
 
-
-
-  <!-- ADD HTML TO HOLD CARD CONTAINER DIVS, MAKE HIDDEN -->
-
+  <!-- Welcome Carousel Slides -->
   <div class= "container" id="main" style="position: sticky; margin-top:150px">
     <div class="carousel carousel-slider center">
 
@@ -41,7 +44,7 @@
 
       <a id="carousel-next" class="moveNextCarousel controlButton waves-effect right"><i
           class="arrow buttonright"></i></a>
-
+      <!-- Slide 1 -->
       <div class="carousel-item white-text" href="#one!" data-slide-to="0">
         <span class="icon-prev" aria-hidden="true"></span>
         <h2>Welcome to the Ace of Pentacles</h2>
@@ -54,6 +57,8 @@
           magic, my friend! 
         </p>
       </div>
+
+      <!-- Slide 2 -->
       <div class="carousel-item white-text" href="#two!" data-slide-to="1">
         <h2>Past Present Future Spread</h2>
         <p class="white-text">This type of spread is for those seaking insight into how a situation has progressed or
@@ -64,6 +69,8 @@
         <button class="ppfBtn btn waves-effect darken-text-2">Get Reading</button>
       </div>
       <div class="carousel-item white-text" href="#three!" data-slide-to="2">
+
+        <!-- Slide 3 -->
         <h2>Celtic Cross Spread</h2>
         <p class="white-text">This spread is a common spread used when you have a specific question you need answered.
         </p>
@@ -74,6 +81,8 @@
         <button class="btn" onclick="location.href='celtic.html'">Get reading</button>
       </div>
       <div class="carousel-item white-text" href="#four!" data-slide-to="4">
+
+        <!-- Slide 4 -->
         <h2>Horoscope</h2>
         <p class="white-text"> If you are just not ready to use Tarot you could also check on your Horoscope.
         </p>
@@ -84,6 +93,7 @@
       </div>
     </div>
 
+    <!-- Past Present Future 3 Card Spread -->
     <div class="row">
       <div class="col s2" id="detailsCard" style="visibility: hidden;">
         <div class="card-panel" id="infoCard">
@@ -112,6 +122,7 @@
           <p id="reveal0"></p>
         </div>
       </div>
+
       <!-- Card 2 - Present -->
       <div class='card col s4'>
         <div class='card-image waves-effect waves-block waves-light'>
@@ -126,6 +137,7 @@
           <p id="reveal1"></p>
         </div>
       </div>
+
       <!-- Card 3 - Future -->
       <div class='card col s4'>
         <div class='card-image waves-effect waves-block waves-light'>
@@ -144,6 +156,7 @@
     <div class="row ppfInfo" style="visibility: hidden"></div>
   </div>
 
+  <!-- Footer -->
   <footer class="page-footer">
     <div class="container">
       <div class="row">
@@ -170,7 +183,7 @@
   </footer>
 
 
-
+  <!-- Import Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./assets/js/script.js"></script>
