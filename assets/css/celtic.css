@@ -316,6 +316,17 @@ div #main .container{
 }
 
 
+@media only screen and (max-device-width: 700px) {
+  #navbarAce {
+    
+    
+    font-size: 126%;
+    
+  }
+
+}
+
+
 @media only screen and (max-device-width: 800px) {
   #celticBox{
     text-align: center;
