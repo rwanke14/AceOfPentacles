@@ -8,6 +8,7 @@ $(document).ready(function () {
 		function (data) {
 			console.log(data);
 			cardData = data;
+			// Correct API -- add missing card meaning
 			cardData.cards[41].meaning_rev =
 				"A relationship becomes less significant than originally expected." +
 				" Friends rather than lovers. Old issues may block new love. With the Hermit, High Priestess, or" +
