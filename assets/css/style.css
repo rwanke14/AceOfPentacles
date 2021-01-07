@@ -415,6 +415,7 @@ textarea {
 
   #image {
     visibility: hidden;
+    
   }
 
 }
@@ -442,3 +443,7 @@ textarea {
     font-size: 10px;
   }
 } 
+
+#imageHoroscope {
+  width: 100px;
+}
