@@ -18,23 +18,13 @@ $(document).ready(function () {
 		$(".carousel").carousel("prev");
 	});
 
-	const settings = {
-		async: true,
-		crossDomain: true,
-		// "url": "https://astrology-horoscope.p.rapidapi.com/zodiac_finder/details_requirements/",
-		method: "GET",
-		headers: {
-			"x-rapidapi-key": "87b6f48f43mshd9aaace1d8eeaefp1a1912jsn1259fae457e2",
-			"x-rapidapi-host": "astrology-horoscope.p.rapidapi.com",
-		},
-	};
-
+	// Call tarot card API 
 	$.getJSON(
 		"https://rws-cards-api.herokuapp.com/api/v1/cards",
 		function (data) {
 			console.log(data);
-			console.log(data.cards[20].name);
 			cardData = data;
+			// Correct API -- add missing card meaning 
 			cardData.cards[41].meaning_rev =
 				"A relationship becomes less significant than originally expected." +
 				" Friends rather than lovers. Old issues may block new love. With the Hermit, High Priestess, or" +
@@ -42,23 +32,28 @@ $(document).ready(function () {
 		}
 	);
 
+	// Declare cardData variable globally
 	var cardData;
 
+	// Primary three card spread function
 	function showCards(data) {
+		// Card 0 listener
 		$("#0").one("click", function () {
+			// Reset card flip class
 			if ($("#0").hasClass("flip")) {
 				$("#0").removeClass("flip");
-			}
+			};
+			// Add Materialize activator attribute for card reveals
 			$("#title0").attr("class", "activator");
+			// Generate a random card
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-			);
+		
 			cardImage = cardData.cards[randomCard].name_short;
+			// Associate random card with its appropriate card image, modify card image source
 			$("#0").attr("src", "./assets/card-images/" + cardImage + ".png");
+			// Randomly determine if card is rightside up or upside down, changes tarot meaning
 			var flip1 = Math.random() < 0.5;
+			// Add flip class from CSS if true
 			if (flip1 === true) {
 				$("#0").addClass("flip");
 			}
@@ -82,11 +77,6 @@ $(document).ready(function () {
 			}
 			$("#title1").attr("class", "activator");
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-			);
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#1").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip2 = Math.random() < 0.5;
@@ -101,9 +91,7 @@ $(document).ready(function () {
 				);
 			} else {
 				$("#reveal1").text("Meaning: " + cardData.cards[randomCard].meaning_up);
-			}
-
-			// Remove selected card from array to prevent duplicate card pulls
+			};
 			cardData.cards.splice(randomCard, 1);
 		});
 
@@ -113,17 +101,12 @@ $(document).ready(function () {
 			}
 			$("#title2").attr("class", "activator");
 			var randomCard = Math.floor(Math.random() * cardData.cards.length);
-			console.log(
-				cardData.cards[randomCard].name +
-					" " +
-					cardData.cards[randomCard].name_short
-			);
 			cardImage = cardData.cards[randomCard].name_short;
 			$("#2").attr("src", "./assets/card-images/" + cardImage + ".png");
 			var flip3 = Math.random() < 0.5;
 			if (flip3 === true) {
 				$("#2").addClass("flip");
-			}
+			};
 
 			$("#title2").text(cardData.cards[randomCard].name);
 			if ($("#2").hasClass("flip")) {
@@ -132,13 +115,12 @@ $(document).ready(function () {
 				);
 			} else {
 				$("#reveal2").text("Meaning: " + cardData.cards[randomCard].meaning_up);
-			}
-
-			// Remove selected card from array to prevent duplicate card pulls
+			};
 			cardData.cards.splice(randomCard, 1);
 		});
 	}
 
+	// Initiate Past Present Future spread. Remove carousel and rewrite page
 	$(".ppfBtn").click(function (e) {
 		e.preventDefault();
 		$(".carousel").remove();
@@ -146,11 +128,5 @@ $(document).ready(function () {
 		$('#detailsCard').attr('style', 'visibility: visible');
 		showCards();
 	});
-
-	$(".welcomeSlide").text("Welcome to the Tarot");
-	$(".welcomeText").text("INSERT TAROT EXPLANATION HERE");
-
-	$(".ppfTitle").text("Past - Present - Future Spread");
-	$(".btn").text("See my spread");
 
 });

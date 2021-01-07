@@ -1,12 +1,3 @@
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Montserrat Alternates', sans-serif;*/
-
-
-
-/* body set with background color and graphic with stars and moon*/
-
-
-
 body {
     display: flex;
     min-height: 100vh;
@@ -46,8 +37,6 @@ body {
 
   }
   
-
-
   /* carousel style */
   .carousel {
 
@@ -169,20 +158,12 @@ body {
      margin-bottom: 25px;
    }
 
-
-
-
 /* About Tarot CSS */
 #aboutTarot{
  
   height: 110%;
 
 }
-
-
-
-
-
 
   /* CONTACT CSS */
 
@@ -250,10 +231,7 @@ textarea {
   resize:none;
 }
 
-/* span {
 
-  color:red
-} */
 
 #note {
 
@@ -269,9 +247,6 @@ textarea {
   text-align:center;
 
 }
-
-
-
 
 /* Celtic Cross CSS*/
 
@@ -292,7 +267,6 @@ textarea {
   height: 48px;
 
 }
-
 
 
 #fullspread {
