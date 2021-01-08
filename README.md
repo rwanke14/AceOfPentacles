@@ -72,7 +72,7 @@ Young Ji Kim- Linter/Javascript/API/Celtic Cross Spread & CSS
 2. Young Ji Kim - https://github.com/youjmi
 3. Frankie Rosado - https://github.com/Franciscorosado09
 4. Rachel Wanke: - https://github.com/rwanke14 
-5. Johnnie Simpson
+5. Johnnie Simpson - https://github.com/balokdecoy
 
 [Acknowledgments]
 
