@@ -354,8 +354,6 @@ textarea {
   width: 80%;
   margin-left: 10%;
 
-
-
 }
 
 #clear{
@@ -367,6 +365,10 @@ textarea {
   margin-left: 10%;
   margin-bottom: 10%;
 
+}
+
+#imageHoroscope {
+  width: 100px;
 }
 
 /* Media Querys for horoscope page and nav bar title. */
@@ -444,8 +446,15 @@ textarea {
   #listOfInfo {
     font-size: 10px;
   }
+
+  #image {
+    visibility: hidden;
+    
+  }
+
+  #imageHoroscope {
+    visibility: hidden;
+  }
+
 } 
 
-#imageHoroscope {
-  width: 100px;
-}
