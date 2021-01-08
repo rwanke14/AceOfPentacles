@@ -4,6 +4,12 @@ $(document).ready(function () {
 		// Pulling the value for the month and day when clicked
 		var day = $("#day").val();
 		var month = $("#month").val();
+		var today = new Date();
+		var dd = String(today.getDate()).padStart(2, "0");
+		var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+		var yyyy = today.getFullYear();
+
+		today = mm + "/" + dd + "/" + yyyy;
 
 		// Calling the function and grabbing the day and month
 		var sign = getZodiacSign(day, month);
@@ -14,7 +20,7 @@ $(document).ready(function () {
 			typeof month === NaN ||
 			month === ""
 		) {
-			alert("Please input both your birth month and birth day.");
+			alert("Please input a valid response.");
 		} else {
 			const settings = {
 				async: true,
@@ -28,7 +34,6 @@ $(document).ready(function () {
 				},
 			};
 			$.ajax(settings).done(function (response) {
-				console.log(response);
 				getPic(sign);
 
 				//Inputing the api call and zodiac sign to html
@@ -36,7 +41,7 @@ $(document).ready(function () {
 				document.querySelector(".main").innerHTML = `
         
 					<p><strong>Sign:</strong> ${sign.charAt(0).toUpperCase() + sign.slice(1)}</p>
-							<p><strong>Todays Date:</strong> ${response.current_date}</p>
+							<p><strong>Todays Date:</strong> ${today}</p>
 					<p><strong>Todays Reading:</strong> ${response.description}</p>
 					<p><strong>Compatibility: </strong> ${response.compatibility}</p>
 					<p><strong>Lucky Number: </strong>${response.lucky_number}</p>
@@ -49,7 +54,7 @@ $(document).ready(function () {
 				);
 				localStorage.setItem("Day", day);
 				localStorage.setItem("Month", month);
-				localStorage.setItem("Todays Date", response.current_date);
+				localStorage.setItem("Todays Date", today);
 				localStorage.setItem("Todays Reading", response.description);
 				localStorage.setItem("Compatibility", response.compatibility);
 				localStorage.setItem("Lucky Number", response.lucky_number);
